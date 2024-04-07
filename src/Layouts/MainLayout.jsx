@@ -4,9 +4,11 @@ import Navbar from "../Pages/Shared/Navbar/Navbar";
  import {Outlet} from 'react-router-dom'
 const MainLayout = () => {
     return (
-        <div>
+        <div className="font-rufina">
            <div className="max-w-7xl mx-auto">
+           <div className="">
            <Navbar></Navbar>
+           </div>
             <Outlet/>
            </div>
             <Footer></Footer>
