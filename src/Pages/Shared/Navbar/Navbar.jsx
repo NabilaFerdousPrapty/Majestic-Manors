@@ -44,13 +44,12 @@ const Navbar = () => {
             <li>
               <NavLink to="/aboutUs">About us</NavLink>
             </li>
-            <Link to="/login" className="btn bg-[#d19945] lg:px-7">
-              Login
-            </Link>
+          
           </ul>
+          
         </div>
         <Link to="/">
-          <h2 className="text-3xl font-body text-[#d19945] ">
+          <h2 className="md:text-3xl font-body text-[#d19945] text-base">
             Majestic Manors
           </h2>
         </Link>
@@ -72,21 +71,21 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end hidden md:flex">
+      <div className="navbar-end">
         {user?.email ? (
-          <div className="dropdown dropdown-hover">
+          <div className="dropdown md:dropdown-hover">
             <div tabIndex={0} role="button" className="btn m-1 ">
               <img src={user.photoURL} alt="" className="w-8 rounded-2xl" />
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36"
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box xl:w-36 md:w-[90px] w-24"
             >
-              <li className="py-3">{user.displayName}</li>
-              <li className="py-3">
+              <li className="md:py-3 py-1 text-center">{user.displayName}</li>
+              <li className="md:py-3 py-1 ">
                 <button
                   onClick={() => logOut()}
-                  className=" bg-[#d19945] px-2 py-1 rounded-md"
+                  className=" bg-[#d19945] px-2 py-1 rounded-md  text-white justify-center"
                 >
                   Log Out
                 </button>
