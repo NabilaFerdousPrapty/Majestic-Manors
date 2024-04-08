@@ -5,7 +5,7 @@ const Contact = () => {
         <div>
             <section className="py-12 bg-gray-100 text-gray-900 my-5 rounded-2xl">
                 <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-                    <div className="py-10 md:py-0 md:px-6 bg-[#7a7c81] text-white rounded-bl-3xl  rounded-tr-3xl ">
+                    <div className="py-10 md:py-0 md:px-8 px-3 bg-[#7a7c81] text-white rounded-bl-3xl  rounded-tr-3xl animate__animated animate__backInLeft">
                         <h1 className="text-4xl font-bold py-3">Get in touch</h1>
                         <p className="pt-2 pb-4">Contact us to learn more about Majestic Manors and our luxurious properties.We’d love to hear from you</p>
                         <div className="space-y-4">

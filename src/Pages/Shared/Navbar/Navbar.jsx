@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 
 import "../../../assets/style.css";
+import UseAuth from "../../../hooks/UseAuth";
 const Navbar = () => {
+  const { logOut, user } = UseAuth();
   return (
     <div className="navbar rounded-badge px-7 py-1 justify-center ">
       <div className="navbar-start w-full">
@@ -45,8 +47,6 @@ const Navbar = () => {
             <Link to="/login" className="btn bg-[#d19945] lg:px-7">
               Login
             </Link>
-
-            
           </ul>
         </div>
         <Link to="/">
@@ -70,13 +70,34 @@ const Navbar = () => {
           <li>
             <NavLink to="/aboutUs">About us</NavLink>
           </li>
-          
         </ul>
       </div>
       <div className="navbar-end hidden md:flex">
-        <Link to="/login" className="btn bg-[#d19945] lg:px-7">
-          Login
-        </Link>
+        {user?.email ? (
+          <div className="dropdown dropdown-hover">
+            <div tabIndex={0} role="button" className="btn m-1 ">
+              <img src={user.photoURL} alt="" className="w-8 rounded-2xl" />
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-36"
+            >
+              <li className="py-3">{user.displayName}</li>
+              <li className="py-3">
+                <button
+                  onClick={() => logOut()}
+                  className=" bg-[#d19945] px-2 py-1 rounded-md"
+                >
+                  Log Out
+                </button>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login" className="btn bg-[#d19945] lg:px-7">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

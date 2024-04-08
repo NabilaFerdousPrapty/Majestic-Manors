@@ -70,7 +70,7 @@ const SingleEstate = ({ estate }) => {
           ))}
         </div>
         <button className="btn bg-[#d19945] mt-4 w-4/6 mx-auto">
-          View Property”
+          View Property
         </button>
       </div>
     </div>
