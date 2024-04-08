@@ -12,7 +12,7 @@ const SingleEstate = ({estate}) => {
 		<p className="text-sm text-gray-600">{
 			(description.length>100)? description.slice(0,100)+'...' :description
 		}</p>
-		<button className="btn bg-[#d19945] mt-4">ViewProperty”</button>
+		<button className="btn bg-[#d19945] mt-4">View Property”</button>
 	</div>
 	<div>
 		
