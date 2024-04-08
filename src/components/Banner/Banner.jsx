@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import { EffectCube, Pagination } from 'swiper/modules';
 const Banner = () => {
     return (
-        <div className="bg-cover  brightness-[.65] bg-center h-max rounded-3xl text-white  flex 
+        <div className="bg-cover  brightness-75 bg-center h-max rounded-3xl text-white  flex 
         lg:flex-row flex-col lg:p-12 p-8 md:gap-6 gap-2  
         justify-between items-center " style={{ backgroundImage: `linear-gradient(0deg, rgba(28, 33, 43, 0.10) 0%, rgba(28, 33, 43, 0.10) 100%), url(${banner})`,
         }}>

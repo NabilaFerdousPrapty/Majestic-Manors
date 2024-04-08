@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaSalesforce } from "react-icons/fa6";
 import { IoPricetagsSharp } from "react-icons/io5";
 import { FaHotel } from "react-icons/fa6";
@@ -13,7 +14,7 @@ const SingleEstate = ({ estate }) => {
     price,
     location,
     area,
-	facilities
+    facilities,
   } = estate;
   return (
     <div>
@@ -42,19 +43,32 @@ const SingleEstate = ({ estate }) => {
           </p>
         </div>
         <div className="flex flex-wrap justify-between">
-          <p className="flex items-center gap-1"><FaHotel />{segment_name}</p>
-          <p className="flex items-center"><FaLocationCrosshairs />{location}</p>
-          
+          <p className="flex items-center gap-1">
+            <FaHotel />
+            {segment_name}
+          </p>
+          <p className="flex items-center">
+            <FaLocationCrosshairs />
+            {location}
+          </p>
         </div>
-		<p className="text-center bg-[#ddc39d] px-4 p-2 rounded-2xl">Total Area:{area}</p>
-		<p className="text-center text-[#d19945]">Top Facilities:</p>
-        
-		<div className="grid grid-cols-2 gap-3">
-			{
-				facilities.map((facility,idx)=><p className="flex items-center gap-2" facility={facility} key={facility.idx}> 
-				<MdFeaturedPlayList />{facility}</p>)
-			}
-		</div>
+        <p className="text-center border border-[#C9BDAB] px-4 p-2 rounded-2xl">
+          Total Area:{area}
+        </p>
+        <p className="text-center text-[#d19945]">Top Facilities:</p>
+
+        <div className="grid grid-cols-2 gap-3">
+          {facilities.map((facility, idx) => (
+            <p
+              className="flex items-center gap-2"
+              facility={facility}
+              key={idx}
+            >
+              <MdFeaturedPlayList />
+              {facility}
+            </p>
+          ))}
+        </div>
         <button className="btn bg-[#d19945] mt-4 w-4/6 mx-auto">
           View Property”
         </button>
@@ -64,3 +78,6 @@ const SingleEstate = ({ estate }) => {
 };
 
 export default SingleEstate;
+SingleEstate.propTypes = {
+  estate: PropTypes.object.isRequired,
+};
