@@ -4,6 +4,8 @@ import { IoPricetagsSharp } from "react-icons/io5";
 import { FaHotel } from "react-icons/fa6";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { MdFeaturedPlayList } from "react-icons/md";
+import { Link } from "react-router-dom";
+
 const SingleEstate = ({ estate }) => {
   const {
     image,
@@ -15,7 +17,9 @@ const SingleEstate = ({ estate }) => {
     location,
     area,
     facilities,
+    id
   } = estate;
+ 
   return (
     <div>
       <div className="flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-3xl  bg-gray-50 text-gray-800 shadow-xl">
@@ -69,9 +73,9 @@ const SingleEstate = ({ estate }) => {
             </p>
           ))}
         </div>
-        <button className="btn bg-[#d19945] mt-4 w-4/6 mx-auto">
+        <Link to={`/property/${id}`}  className="btn bg-[#d19945] mt-4 w-4/6 mx-auto">
           View Property
-        </button>
+        </Link>
       </div>
     </div>
   );

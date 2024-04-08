@@ -1,28 +1,38 @@
-import { useContext } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
+
 import UseAuth from "../../hooks/UseAuth";
+import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Signup = () => {
   const { createUser } = UseAuth()
-  
+   //navigation
+   const navigate = useNavigate();
+   const location = useLocation();
+   const from = location?.state || "/";
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
+  const regex="^(?=.*[a-z])(?=.*[A-Z]).{6,}$";
 
   const onSubmit = (data) => {
     console.log(data);
     const { UserName,Email, password, photoURL, confirmPassword } = data;
     if (password !== confirmPassword) {
-     
+      
       return;
     }
+    
     createUser(Email, password)
-    .then(result=>console.log(result))
-    .catch(err=>console.log(err))
+    .then((result) => {
+      if (result.user) {
+        navigate(from);
+      }
+    })
+    .catch((err) => console.log(err));
   };
   return (
     <div className="flex justify-center items-center mt-10">

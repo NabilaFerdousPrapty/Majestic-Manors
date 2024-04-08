@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-
+import img from "../../../assets/user.png"
 import "../../../assets/style.css";
 import UseAuth from "../../../hooks/UseAuth";
 const Navbar = () => {
@@ -75,20 +75,28 @@ const Navbar = () => {
         {user?.email ? (
           <div className="dropdown md:dropdown-hover">
             <div tabIndex={0} role="button" className="btn m-1 ">
-              <img src={user.photoURL} alt="" className="w-8 rounded-2xl" />
+              <img src={user?.photoURL|| img} alt="" className="w-8 rounded-2xl" />
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box xl:w-36 md:w-[90px] w-24"
+              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box xl:w-36 md:w-[93px] lg:w-[90px] w-[86px]"
             >
-              <li className="md:py-3 py-1 text-center">{user.displayName}</li>
-              <li className="md:py-3 py-1 ">
+              <li className="md:pt-3 py-1 text-center">{user?.displayName ||'UserName'}</li>
+              <li className="md:pt-3 py-1 ">
                 <button
                   onClick={() => logOut()}
                   className=" bg-[#d19945] px-2 py-1 rounded-md  text-white justify-center"
                 >
                   Log Out
                 </button>
+              </li>
+              <li className=" py-1 ">
+                <Link to="/updateProfile"
+                  
+                  className=" bg-[#d19945] px-2 py-1 rounded-md  text-white justify-center"
+                >
+                  Update Profile
+                </Link>
               </li>
             </ul>
           </div>
