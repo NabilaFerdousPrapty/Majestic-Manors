@@ -1,0 +1,116 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/PmDJCXd/1.jpg",
+      "estate_title": "Oceanfront Paradise",
+      "segment_name": "Beachfront Properties",
+      "description": "Discover unparalleled luxury with this stunning beachfront villa, nestled along the pristine shores of a secluded paradise. Embrace the ultimate in coastal living as you wake up to breathtaking panoramic views of the azure ocean stretching to the horizon. This exquisite villa offers a symphony of elegance and tranquility, where every detail is meticulously crafted to evoke a sense of opulence and serenity. Step through the grand entrance and be greeted by a spacious interior adorned with lavish furnishings and modern amenities, creating an ambiance of refined sophistication. Indulge in the epitome of relaxation as you lounge in the sun-soaked living spaces, basking in the gentle sea breeze and the sound of waves lapping at your doorstep. Enjoy seamless indoor-outdoor living with expansive glass doors that open onto a private terrace, where you can dine al fresco amidst lush tropical gardens and mesmerizing ocean vistas. Unwind in your own secluded oasis with direct access to a pristine sandy beach, where you can swim in crystalline waters, stroll along the shore, or simply lounge under the shade of swaying palm trees. With unrivaled privacy and exclusivity, this oceanfront paradise offers a sanctuary for those seeking a retreat from the hustle and bustle of everyday life. Whether you're relaxing by the infinity pool, indulging in gourmet meals prepared by a private chef, or exploring the nearby coral reefs teeming with marine life, every moment spent in this idyllic villa is an escape to pure bliss. Come home to luxury, come home to the Oceanfront Paradise.",
+      "price": "$45,000",
+      "status": "rent",
+      "area": "5000 sqft",
+      "location": "Malibu, California",
+      "facilities": ["Infinity pool", "Private beach", "Spa", "Gourmet kitchen"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/FmS0d1n/2.jpg",
+      "estate_title": "Luxury Penthouse Retreat",
+      "segment_name": "Penthouses",
+      "description": "Escape to the pinnacle of urban luxury with this exquisite penthouse retreat, nestled atop a prestigious skyscraper in the heart of the bustling city. Elevate your lifestyle as you soak in breathtaking panoramic views of the iconic skyline, stretching as far as the eye can see. This extraordinary penthouse offers a sanctuary of sophistication and refinement, where modern design meets timeless elegance. Step into the expansive living space adorned with floor-to-ceiling windows, allowing natural light to flood the interiors and accentuate the sleek contemporary furnishings. Immerse yourself in unparalleled comfort and style, with every corner thoughtfully curated to exude opulence and charm. Entertain guests in the spacious open-plan layout, complete with a gourmet kitchen outfitted with state-of-the-art appliances and a chic dining area perfect for hosting elegant soirées. Retreat to the sumptuous master suite, boasting indulgent amenities such as a lavish en-suite bathroom, a private study, and a serene balcony overlooking the glittering city lights. Unwind in style on the expansive rooftop terrace, where you can savor cocktails at sunset, dine under the stars, or simply lounge in the infinity pool while admiring the mesmerizing cityscape below. With exclusive access to a range of luxury amenities including a fitness center, spa, and concierge services, this penthouse offers the epitome of urban living at its finest. Whether you're seeking a sophisticated urban retreat or a prestigious address to call home, the Luxury Penthouse Retreat awaits to fulfill your every desire.",
+      "price": "$3,500,000",
+      "status": "sale",
+      "area": "3000 sqft",
+      "location": "Manhattan, New York",
+      "facilities": ["Rooftop terrace", "Fitness center", "Home theater"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/Wg6DGWM/3.png",
+      "estate_title": "Private Island Oasis",
+      "segment_name": "Private Islands",
+      "description": "Embark on an unparalleled journey to your own private paradise with this exclusive island sanctuary. Nestled amidst the azure waters of the South Pacific, this secluded retreat offers a haven of serenity and luxury unlike any other. Immerse yourself in the natural beauty of your surroundings as you explore pristine beaches, lush tropical landscapes, and crystal-clear waters teeming with vibrant marine life. Indulge in ultimate relaxation as you unwind in luxurious accommodations, meticulously designed to harmonize with the island's breathtaking scenery. Wake up to the gentle sound of waves lapping against the shore, and bask in the warmth of the tropical sun from your expansive veranda overlooking panoramic ocean vistas. Whether you're lounging in a hammock beneath swaying palm trees, snorkeling in pristine coral reefs, or savoring gourmet cuisine prepared by a private chef, every moment spent on this secluded island sanctuary is an escape to pure bliss. With unparalleled privacy, unmatched tranquility, and a myriad of exclusive amenities at your fingertips, the Secluded Island Sanctuary beckons those with a discerning taste for luxury to embark on the ultimate tropical retreat.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "10 acres",
+      "location": "Caribbean",
+      "facilities": ["Luxury villa", "Helipad", "Yacht dock"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/L9jXS18/4.jpg",
+      "estate_title": "Majestic Mansion",
+      "segment_name": "Mansions",
+      "description": "Enter a world of unparalleled luxury and sophistication with this majestic mansion nestled in the prestigious enclave of Beverly Hills, California. A timeless masterpiece of architectural excellence, this grand estate exudes an aura of grandeur and refinement at every turn. Step through the grand double doors into the palatial foyer, adorned with intricate marble floors, soaring ceilings, and a sweeping staircase that sets the tone for the opulence that awaits within. With over 8,000 square feet of meticulously designed living space, this estate offers an unparalleled lifestyle for the discerning buyer. Entertain guests in the sprawling formal living areas, featuring exquisite detailing, luxurious finishes, and panoramic views of the manicured grounds. Indulge your culinary desires in the state-of-the-art gourmet kitchen, equipped with top-of-the-line appliances, custom cabinetry, and a spacious island perfect for hosting intimate gatherings. Retreat to the lavish master suite, boasting a private sanctuary complete with a spa-like en-suite bathroom, dual walk-in closets, and a private terrace overlooking the lush landscaped gardens. Outside, the expansive grounds offer a wealth of outdoor amenities, including a tennis court, swimming pool, and lush gardens, providing the perfect backdrop for outdoor entertaining and relaxation. With its unparalleled location in the heart of Beverly Hills, this majestic mansion offers a rare opportunity to experience the epitome of luxury living in one of the world's most exclusive neighborhoods.",
+      "price": "$80,500",
+      "status": "rent",
+      "area": "8000 sqft",
+      "location": "Beverly Hills, California",
+      "facilities": ["Grand foyer", "Tennis court", "Wine cellar"]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/DRyDtWy/5.jpg",
+      "estate_title": "Seaside Villa Retreat",
+      "segment_name": "Villas",
+      "description": "Immerse yourself in the enchanting beauty of coastal living with this exquisite seaside villa nestled along the sun-drenched shores of the Cote d'Azur, France. Inspired by the timeless elegance of Mediterranean architecture, this luxurious retreat offers a harmonious blend of classic charm and modern comforts. Step through the wrought iron gates and be greeted by lush gardens and fragrant citrus trees that lead to the grand entrance of the villa. Adorned with terracotta tiles, whitewashed walls, and rustic wooden beams, the villa exudes warmth and sophistication at every turn. Inside, the spacious living areas are bathed in natural light, with floor-to-ceiling windows framing panoramic views of the azure sea and golden sands. Relax in the comfort of the elegantly appointed bedrooms, each offering serene ocean views and private en-suite bathrooms. Outside, the expansive terrace beckons with its inviting infinity pool, alfresco dining area, and shaded pergola, perfect for entertaining guests or simply soaking up the Mediterranean sunshine in peace and tranquility. Indulge your senses in the culinary delights of the outdoor kitchen, where fresh seafood and local produce are transformed into gourmet meals to be enjoyed under the stars. With its idyllic location, luxurious amenities, and unparalleled beauty, this seaside villa retreat offers a rare opportunity to experience the epitome of coastal living on the French Riviera.",
+      "price": "$6,200,000",
+      "status": "sale",
+      "area": "4000 sqft",
+      "location": "Cote d'Azur, France",
+      "facilities": ["Private pool", "Outdoor kitchen", "Gym"]
+    }
+,    
+{
+  "id": 6,
+  "image": "https://i.ibb.co/TrVrHpy/6.jpg",
+  "estate_title": "Exclusive Resort Getaway",
+  "segment_name": "Resorts",
+  "description": "Embark on a journey to unparalleled luxury and relaxation with this exclusive resort getaway nestled amidst the breathtaking landscapes of Maui, Hawaii. Surrounded by pristine beaches, lush tropical gardens, and azure waters, this secluded retreat offers an oasis of tranquility and indulgence for discerning travelers. Step into the lap of luxury as you are welcomed by world-class amenities and personalized service at every turn. Indulge in the ultimate relaxation with a stay in one of the resort's private villas, meticulously designed to offer the utmost comfort and privacy. Pamper yourself at the spa and wellness center, where rejuvenating treatments and therapeutic massages await to soothe the mind, body, and soul. Savor the finest culinary creations at the resort's gourmet dining venues, showcasing locally sourced ingredients and inspired international cuisine. Explore the natural wonders of Maui with a range of outdoor activities and excursions, from snorkeling in pristine coral reefs to hiking through lush rainforests and cascading waterfalls. Whether you're seeking a romantic retreat, a family getaway, or a destination wedding in paradise, the Exclusive Resort Getaway offers a bespoke experience tailored to your every desire. Come and experience the epitome of luxury living amidst the beauty of Maui, where every moment is an unforgettable escape into paradise.",
+  "price": "$15,000,000",
+  "status": "sale",
+  "area": "20 acres",
+  "location": "Maui, Hawaii",
+  "facilities": ["Private villas", "Spa & wellness center", "Gourmet dining"]
+}
+,
+{
+  "id": 7,
+  "image": "https://i.ibb.co/7C7S8VQ/7.jpg",
+  "estate_title": "Luxury Ski Chalet",
+  "segment_name": "Villas",
+  "description": "Immerse yourself in the ultimate alpine luxury with this exquisite ski-in/ski-out chalet nestled in the picturesque slopes of Aspen, Colorado. Boasting breathtaking mountain views, upscale amenities, and convenient access to world-class slopes, this chalet offers the perfect blend of adventure and indulgence for discerning ski enthusiasts. Step inside and be greeted by the warmth of the cozy interior, featuring rustic-chic furnishings, exposed wooden beams, and a roaring fireplace inviting you to unwind after a day on the slopes. The spacious living area offers ample space for entertaining, with floor-to-ceiling windows framing panoramic views of the snow-capped peaks and starry night skies. Retreat to the comfort of the luxurious bedrooms, each thoughtfully designed to ensure a restful night's sleep amidst the tranquil mountain surroundings. Indulge in apres-ski relaxation in the outdoor hot tub, where you can soak away the day's adventures while savoring the crisp mountain air. With a dedicated ski room for storing equipment, convenient access to the slopes, and a range of onsite amenities including a fitness center and concierge services, this ski chalet offers the epitome of alpine living in Aspen's most sought-after location. Whether you're seeking a cozy retreat for intimate family getaways or a luxurious base for entertaining friends, the Luxury Ski Chalet promises an unforgettable mountain experience unlike any other.",
+  "price": "$4,800,000",
+  "status": "sale",
+  "area": "3500 sqft",
+  "location": "Aspen, Colorado",
+  "facilities": ["Ski room", "Hot tub", "Fireplace"]
+}
+,
+{
+  "id": 8,
+  "image": "https://i.ibb.co/PtP3QTK/8.jpg",
+  "estate_title": "Tropical Beachfront Haven",
+  "segment_name": "Beachfront Properties",
+  "description": "Experience the epitome of island living with this luxurious beachfront haven nestled along the pristine shores of the Bahamas. Surrounded by the turquoise waters of the Caribbean Sea and framed by swaying palm trees, this exquisite estate offers a sanctuary of serenity and sophistication for discerning buyers. Step inside and be captivated by the contemporary design and open-concept layout, where floor-to-ceiling windows blur the lines between indoor and outdoor living, allowing for seamless transitions and breathtaking ocean views from every angle. The spacious living areas are adorned with sleek furnishings and modern finishes, creating an ambiance of understated elegance and comfort. Entertain guests in style in the expansive outdoor lounge area, complete with a sparkling infinity pool overlooking the azure waters, a shaded cabana for al fresco dining, and a private boat dock for exploring nearby islands and hidden coves. Retreat to the tranquility of the master suite, featuring a luxurious en-suite bathroom, a private terrace overlooking the ocean, and a walk-in closet for added convenience. With direct beach access just steps away from your doorstep, you can spend your days lounging on the powdery white sands, swimming in the crystal-clear waters, or indulging in a variety of water sports and activities. Whether you're seeking a permanent residence, a vacation retreat, or an investment opportunity, the Tropical Beachfront Haven offers the ultimate in luxury beachfront living in one of the world's most coveted destinations.",
+  "price": "$7,750,000",
+  "status": "sale",
+  "area": "6000 sqft",
+  "location": "Bahamas",
+  "facilities": ["Infinity pool", "Outdoor lounge area", "Boat dock"]
+}
+,
+{
+  "id": 9,
+  "image": "https://i.ibb.co/zRsCXKY/9.jpg",
+  "estate_title": "Secluded Island Sanctuary",
+  "segment_name": "Private Islands",
+  "description": "Embark on an extraordinary escape to your own private paradise with this secluded island sanctuary nestled amidst the pristine waters of Fiji. Surrounded by turquoise lagoons, white sandy beaches, and lush tropical vegetation, this exclusive retreat offers a rare opportunity to experience unparalleled tranquility and luxury in the heart of the South Pacific. Step ashore onto the powdery sands of your private beach and be enveloped by the serenity of your surroundings. The centerpiece of the island is a luxurious villa, meticulously designed to blend seamlessly with the natural landscape while offering every modern comfort and convenience. Inside, discover spacious living areas adorned with elegant furnishings, panoramic windows framing breathtaking ocean views, and an array of luxurious amenities to enhance your stay. Outside, the island beckons with a wealth of outdoor activities and experiences, from snorkeling in vibrant coral reefs to exploring hidden coves by yacht or helicopter. With a helipad and yacht dock at your disposal, you have the freedom to explore the surrounding islands and beyond at your leisure. Whether you seek a romantic retreat, a family adventure, or a private escape with friends, the Secluded Island Sanctuary promises an unforgettable experience amidst the beauty and tranquility of Fiji.",
+  "price": "$120,000",
+  "status": "rent",
+  "area": "15 acres",
+  "location": "Fiji",
+  "facilities": ["Luxury villa", "Helipad", "Yacht dock"]
+}
+
+  ]
+  
