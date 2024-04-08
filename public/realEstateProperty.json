@@ -5,7 +5,7 @@
       "estate_title": "Oceanfront Paradise",
       "segment_name": "Beachfront Properties",
       "description": "Discover unparalleled luxury with this stunning beachfront villa, nestled along the pristine shores of a secluded paradise. Embrace the ultimate in coastal living as you wake up to breathtaking panoramic views of the azure ocean stretching to the horizon. This exquisite villa offers a symphony of elegance and tranquility, where every detail is meticulously crafted to evoke a sense of opulence and serenity. Step through the grand entrance and be greeted by a spacious interior adorned with lavish furnishings and modern amenities, creating an ambiance of refined sophistication. Indulge in the epitome of relaxation as you lounge in the sun-soaked living spaces, basking in the gentle sea breeze and the sound of waves lapping at your doorstep. Enjoy seamless indoor-outdoor living with expansive glass doors that open onto a private terrace, where you can dine al fresco amidst lush tropical gardens and mesmerizing ocean vistas. Unwind in your own secluded oasis with direct access to a pristine sandy beach, where you can swim in crystalline waters, stroll along the shore, or simply lounge under the shade of swaying palm trees. With unrivaled privacy and exclusivity, this oceanfront paradise offers a sanctuary for those seeking a retreat from the hustle and bustle of everyday life. Whether you're relaxing by the infinity pool, indulging in gourmet meals prepared by a private chef, or exploring the nearby coral reefs teeming with marine life, every moment spent in this idyllic villa is an escape to pure bliss. Come home to luxury, come home to the Oceanfront Paradise.",
-      "price": "$45,000",
+      "price": "$145,000",
       "status": "rent",
       "area": "5000 sqft",
       "location": "Malibu, California",
@@ -21,7 +21,7 @@
       "status": "sale",
       "area": "3000 sqft",
       "location": "Manhattan, New York",
-      "facilities": ["Rooftop terrace", "Fitness center", "Home theater"]
+      "facilities": ["Rooftop terrace", "Fitness center", "Home theater", "Concierge services"]
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "status": "sale",
       "area": "10 acres",
       "location": "Caribbean",
-      "facilities": ["Luxury villa", "Helipad", "Yacht dock"]
+      "facilities": ["Luxury villa", "Helipad", "Yacht dock", "Private beach"]
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "status": "rent",
       "area": "8000 sqft",
       "location": "Beverly Hills, California",
-      "facilities": ["Grand foyer", "Tennis court", "Wine cellar"]
+      "facilities": ["Grand foyer", "Tennis court", "Wine cellar", "Home theater"]
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "status": "sale",
       "area": "4000 sqft",
       "location": "Cote d'Azur, France",
-      "facilities": ["Private pool", "Outdoor kitchen", "Gym"]
+      "facilities": ["Private pool", "Outdoor kitchen", "Gym", "Citrus gardens"]
     }
 ,    
 {
@@ -70,7 +70,7 @@
   "status": "sale",
   "area": "20 acres",
   "location": "Maui, Hawaii",
-  "facilities": ["Private villas", "Spa & wellness center", "Gourmet dining"]
+  "facilities": ["Private villas", "Spa & wellness center", "Gourmet dining", "Outdoor activities"]
 }
 ,
 {
@@ -83,7 +83,7 @@
   "status": "sale",
   "area": "3500 sqft",
   "location": "Aspen, Colorado",
-  "facilities": ["Ski room", "Hot tub", "Fireplace"]
+  "facilities": ["Ski room", "Hot tub", "Fireplace", "Fitness center"]
 }
 ,
 {
@@ -96,7 +96,7 @@
   "status": "sale",
   "area": "6000 sqft",
   "location": "Bahamas",
-  "facilities": ["Infinity pool", "Outdoor lounge area", "Boat dock"]
+  "facilities": ["Infinity pool", "Outdoor lounge area", "Boat dock", "Private beach"]
 }
 ,
 {
@@ -109,7 +109,7 @@
   "status": "rent",
   "area": "15 acres",
   "location": "Fiji",
-  "facilities": ["Luxury villa", "Helipad", "Yacht dock"]
+  "facilities": ["Luxury villa", "Helipad", "Yacht dock", "Private beach"]
 }
 
   ]
