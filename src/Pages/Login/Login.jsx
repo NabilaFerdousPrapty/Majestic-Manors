@@ -3,8 +3,13 @@ import { useForm } from "react-hook-form";
 import UseAuth from "../../hooks/UseAuth";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { toast } from 'react-hot-toast';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 const Login = () => {
   const { signInUser, googleSignIn, githubSignIn } = UseAuth();
+  const [showPassword, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
@@ -16,7 +21,11 @@ const Login = () => {
     const { Email, password } = data;
     signInUser(Email, password)
       .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+      .catch((err) =>{
+       console.log(err);
+       toast.error(err.message);
+      }
+      );
   };
   //navigation
   const navigate = useNavigate();
@@ -27,11 +36,13 @@ const Login = () => {
   const handleSocialLogin = (socialProvider) => {
     socialProvider()
       .then((result) => {
+        toast.success("Login successful");
         if (result.user) {
           navigate(from);
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) =>{console.log(err);
+      toast.error(err.message);});
   };
 
   return (
@@ -55,18 +66,21 @@ const Login = () => {
               <span className="text-red-600">This field is required</span>
             )}
           </div>
-          <div className="space-y-1 text-sm">
+          <div className="space-y-1 text-sm relative">
             <label htmlFor="password" className="block text-gray-600">
               Password
             </label>
             <input
-              type="password"
+             type={showPassword?"text":"password"}
               name="password"
               id="password"
               placeholder="Password"
               {...register("password", { required: true })}
               className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-indigo-600"
             />
+             <span className="absolute top-[40%] left-[90%]" onClick={()=>setShowPassword(!showPassword)}>
+              {showPassword?<FaEyeSlash/>:<FaEye/>}
+            </span>
             {errors.password && (
               <span className="text-red-600">Password is required</span>
             )}
