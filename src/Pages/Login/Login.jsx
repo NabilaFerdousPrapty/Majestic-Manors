@@ -3,13 +3,18 @@ import { useForm } from "react-hook-form";
 import UseAuth from "../../hooks/UseAuth";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { toast } from 'react-hot-toast';
+import { toast } from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 const Login = () => {
   const { signInUser, googleSignIn, githubSignIn } = UseAuth();
   const [showPassword, setShowPassword] = useState(false);
+  //navigation
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
+  // console.log(location);
   const {
     register,
     handleSubmit,
@@ -17,21 +22,21 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     const { Email, password } = data;
     signInUser(Email, password)
-      .then((result) => console.log(result))
-      .catch((err) =>{
-       console.log(err);
-       toast.error(err.message);
-      }
-      );
+      .then((result) => {
+        // console.log(result);
+        toast.success("Login successful");
+        if (result.user) {
+          navigate(from);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message);
+      });
   };
-  //navigation
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location?.state || "/";
-  // console.log(location);
 
   const handleSocialLogin = (socialProvider) => {
     socialProvider()
@@ -41,8 +46,10 @@ const Login = () => {
           navigate(from);
         }
       })
-      .catch((err) =>{console.log(err);
-      toast.error(err.message);});
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message);
+      });
   };
 
   return (
@@ -71,15 +78,18 @@ const Login = () => {
               Password
             </label>
             <input
-             type={showPassword?"text":"password"}
+              type={showPassword ? "text" : "password"}
               name="password"
               id="password"
               placeholder="Password"
               {...register("password", { required: true })}
               className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-indigo-600"
             />
-             <span className="absolute top-[40%] left-[90%]" onClick={()=>setShowPassword(!showPassword)}>
-              {showPassword?<FaEyeSlash/>:<FaEye/>}
+            <span
+              className="absolute top-[40%] left-[90%]"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </span>
             {errors.password && (
               <span className="text-red-600">Password is required</span>

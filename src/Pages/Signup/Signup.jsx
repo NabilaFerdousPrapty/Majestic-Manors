@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom';
 import { useState } from "react";
 
 const Signup = () => {
-  const { createUser } = UseAuth()
+  const { createUser,updateUserProfile } = UseAuth()
    //navigation
    const navigate = useNavigate();
    const location = useLocation();
@@ -41,11 +41,15 @@ const Signup = () => {
       return;
     }
     createUser(Email, password)
-      .then((result) => {
-        toast.success("Account created successfully");
-        if (result.user) {
+      .then(() => {
+        updateUserProfile(UserName, photoURL)
+        .then(()=>{
+          toast.success("Account created successfully");
+        
           navigate(from);
-        }
+        
+        })
+        
       })
       .catch((err) => {
         console.log(err);

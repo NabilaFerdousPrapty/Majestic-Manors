@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "./../Firebase/FirebaseConfig";
-
+import { toast } from "react-hot-toast";
 
 import {
   GithubAuthProvider,
@@ -9,7 +9,8 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
-  signOut, 
+  signOut,
+  updateProfile,
 } from "firebase/auth";
 
 export const AuthContext = createContext(null);
@@ -20,13 +21,20 @@ const AuthProvider = ({ children }) => {
   console.log(loading);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
-  
+
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
- 
- 
+
+  const updateUserProfile = (displayName, photoURL) => {
+  return  updateProfile(auth.currentUser, {
+      displayName: displayName,
+      photoURL: photoURL,
+    })
+    
+  };
+
   const signInUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -39,24 +47,34 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithPopup(auth, githubProvider);
   };
-  const logOut=()=> {
+  const logOut = () => {
     setUser(null);
-    setLoading(false)
+    setLoading(false);
     return signOut(auth);
   };
   useEffect(() => {
-  const unsubscribe=  onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-       setLoading(false);
+        setLoading(false);
       }
       setLoading(false);
     });
-    return ()=> unsubscribe();
+    return () => unsubscribe();
   }, []);
+
   return (
     <AuthContext.Provider
-      value={{ createUser, signInUser, googleSignIn, githubSignIn, logOut,user,loading }}
+      value={{
+        createUser,
+        signInUser,
+        googleSignIn,
+        githubSignIn,
+        logOut,
+        user,
+        loading,
+        updateUserProfile,
+      }}
     >
       {children}
     </AuthContext.Provider>
