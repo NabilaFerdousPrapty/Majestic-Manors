@@ -1,16 +1,18 @@
 import {useParams} from "react-router-dom";
 import{ useLoaderData
 } from "react-router-dom";
+import LocationMap from "../LocationMap/LocationMap";
 
 
 const ViewProperties = () => {
     const {id} = useParams();
     const properties=useLoaderData();
    
-    console.log(properties);
+    // console.log(properties);
     const property = properties.find((property)=>property.id==id);
-    const {image,estate_title,segment_name,description,price,status,area,location,facilities}=property;
+    const {image,estate_title,segment_name,description,price,status,area,location,facilities,coordinates}=property;
     return (
+      <>
       <div className="max-w-full p-4 shadow-md bg-gray-50 text-gray-800">
       <div className="flex justify-between pb-4 border-bottom">
         <div className="flex items-center">
@@ -30,7 +32,7 @@ const ViewProperties = () => {
             <h3 className="text-xl font-semibold text-center text-[#d19945]">{estate_title}</h3>
           </a>
           <p className="leading-snug text-gray-600">{description}</p>
-         <div className="flex md:flex-row flex-col items-center justify-between">
+         <div className="flex md:flex-row flex-col items-center justify-between gap-1">
          {
           facilities.map((facility,index)=>(
             <div key={index} className="flex items-center justify-between">
@@ -46,12 +48,21 @@ const ViewProperties = () => {
      <p className="rounded-lg  text-[#d19945] px-2 py-1 justify-center border-2 border-[#d19945]">
        For {status} now
       </p>
-      <p>{price} only</p>
+      <p className="text-2xl font-bold text-[#d19945]">{price} only</p>
       <div className="btn bg-[#d19945]">
         Book Now
       </div>
      </div>
     </div>
+    <h2 className="text-center text-4xl font-bold text-[#d19945] pt-9">Get The Specific Location By Map </h2>
+    <p className="text-center pb-8 pt-3">We are here to help you to reach the specific location of the property.Still you have any query then contact us. 
+    </p>
+   <div className="h-screen w-full px-1">
+   
+   <LocationMap coordinates={coordinates} location={location}/>
+   </div>
+      </>
+      
     );
 };
 

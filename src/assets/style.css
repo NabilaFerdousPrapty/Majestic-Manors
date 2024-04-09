@@ -2,3 +2,7 @@ a.active {
     background-color: #d19945 !important;
     
   }
+  .leaflet-container{
+    width: 100%;
+    height: 100vh;
+  }

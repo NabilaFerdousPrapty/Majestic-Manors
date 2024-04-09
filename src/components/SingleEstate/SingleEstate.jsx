@@ -43,7 +43,7 @@ const SingleEstate = ({ estate }) => {
             {price}
           </p>
           <p className="border-2 bg-[#ddc39d] px-4 p-2 rounded-2xl flex  items-center">
-            <FaSalesforce /> {status}
+             Area:{area}
           </p>
         </div>
         <div className="flex flex-wrap justify-between">
@@ -52,12 +52,12 @@ const SingleEstate = ({ estate }) => {
             {segment_name}
           </p>
           <p className="flex items-center">
-            <FaLocationCrosshairs />
-            {location}
+          <FaSalesforce /> {status} 
           </p>
         </div>
-        <p className="text-center border border-[#C9BDAB] px-4 p-2 rounded-2xl">
-          Total Area:{area}
+        <p className="text-center border border-[#C9BDAB] px-4 p-2 rounded-2xl flex justify-center items-center">
+           <FaLocationCrosshairs />
+            {location}
         </p>
         <p className="text-center text-[#d19945]">Top Facilities:</p>
 
