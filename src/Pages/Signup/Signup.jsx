@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 import UseAuth from "../../hooks/UseAuth";
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { useState } from "react";
 
 const Signup = () => {
   const { createUser } = UseAuth()
@@ -11,29 +13,47 @@ const Signup = () => {
    const navigate = useNavigate();
    const location = useLocation();
    const from = location?.state || "/";
+  //  const [registerError, setRegisterError] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+ 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const regex="^(?=.*[a-z])(?=.*[A-Z]).{6,}$";
+
 
   const onSubmit = (data) => {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     console.log(data);
-    const { UserName,Email, password, photoURL, confirmPassword } = data;
+    // setRegisterError('');
+    const { UserName, Email, password, photoURL, confirmPassword } = data;
     if (password !== confirmPassword) {
-      
+      toast.error("Passwords do not match");
       return;
     }
-    
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters");
+      return;
+    } else if (!regex.test(password)) {
+      toast.error("Password must contain at least one uppercase letter, one lowercase letter, and be at least 6 characters");
+      return;
+    }
     createUser(Email, password)
-    .then((result) => {
-      if (result.user) {
-        navigate(from);
-      }
-    })
-    .catch((err) => console.log(err));
+      .then((result) => {
+        toast.success("Account created successfully");
+        if (result.user) {
+          navigate(from);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message);
+      });
   };
+  
+  
   return (
     <div className="flex justify-center items-center mt-10">
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
@@ -84,34 +104,41 @@ const Signup = () => {
             />
            
           </div>
-          <div className="space-y-1 text-sm">
+          <div className="space-y-1 text-sm relative">
             <label htmlFor="password" className="block text-gray-600">
               Password
             </label>
             <input
-              type="password"
+              type={showPassword?"text":"password"}
               name="password"
               id="password"
               placeholder="Password"
                 {...register("password", { required: true })}
               className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-indigo-600"
             />
+            <span className="absolute top-1/2 left-[90%]" onClick={()=>setShowPassword(!showPassword)}>
+              {showPassword?<FaEyeSlash/>:<FaEye/>}
+            </span>
             {errors.password && <span className="text-red-600">Password is required</span>}
           </div>
 
 
-          <div className="space-y-1 text-sm">
+          <div className="space-y-1 text-sm relative">
             <label htmlFor="password" className="block text-gray-600">
               Confirm Password
             </label>
             <input
-              type="password"
+              type={showConfirmPassword?"text":"password"}
               name="confirm-password"
               id="confirm-password"
               placeholder="repeat your Password"
                 {...register("confirmPassword", { required: true })}
               className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-indigo-600"
             />
+            <span className="absolute top-1/2 left-[90%]" 
+            onClick={()=>setShowConfirmPassword(!showConfirmPassword)}>
+               {showConfirmPassword?<FaEyeSlash/>:<FaEye/>}
+            </span>
             {errors.confirmPassword && <span className="text-red-600">Password confirmation is required</span>}
           </div>
 
