@@ -104,7 +104,7 @@
   "area": "6000 sqft",
   "location": "Bahamas",
   "facilities": ["Infinity pool", "Outdoor lounge area", "Boat dock", "Private beach"],
-  "position": [25.0343, -77.3963]
+  "coordinates": [25.0343, -77.3963]
 }
 ,
 {
