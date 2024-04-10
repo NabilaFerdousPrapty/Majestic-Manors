@@ -15,17 +15,17 @@ const UserReview = ({ review }) => {
   } = review;
 
   return (
-    <div className='border-2 border-[#d19945] rounded-2xl lg:mb-7 mb-3'>
+    <div className='border-2 border-[#d19945] rounded-2xl lg:mb-7 mb-3 bg-gray-50 sh'>
       <section className="p-6">
         <div className="container mx-auto">
-          <div className='flex flex-row-reverse justify-between items-center pb-4'>
+          <div className='flex md:flex-row-reverse flex-col justify-between items-center pb-4'>
             <h1 className="text-2xl font-semibold text-[#d19945]">
              <span className='text-gray-800 px-1'>Hey there I'm </span> {user_name}
             </h1>
             <img src={user_image} alt="" className='w-[100px] h-[100px] rounded-lg' />
           </div>
           <h2 className="text-3xl text-center text-[#d19945] py-4">The Property I am reviewing</h2>
-          <div className="flex justify-between items-center">
+          <div className="flex md:flex-row flex-col justify-between items-center">
             <div className='flex flex-col gap-2'>
               <p className="text-[#d19945]">location: <span className='text-gray-800'>{location}</span></p>
               <p className="text-[#d19945]">Segment name:<span className='text-gray-800'>{segment_name}</span></p>

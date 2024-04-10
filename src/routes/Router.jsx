@@ -11,16 +11,26 @@ import PrivateRoute from "../components/Private/PrivateRoute";
 
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ViewProperties from "../components/ViewProperties/ViewProperties";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element:(
+      <>
+      <ScrollToTop/>
+      <MainLayout />
+      </> ),
     errorElement: <Error />,
     children: [
       {
         path: "/",
-        element: <Home />,
+        element:( 
+          <>
+          <ScrollToTop/>
+          <Home />
+          </>
+        ),
       },
       {
         path: "/gallery",
@@ -58,6 +68,7 @@ const router = createBrowserRouter([
         path: "/property/:id",
         element: (
           <PrivateRoute>
+            <ScrollToTop/>
             <ViewProperties></ViewProperties>
           </PrivateRoute>
         ),
