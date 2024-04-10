@@ -10,7 +10,6 @@ const UpdateProfile = () => {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm()
 
@@ -18,7 +17,7 @@ const UpdateProfile = () => {
         console.log(data);
         const { UserName, photoURL } = data;
         updateUserProfile(UserName, photoURL);
-        toast.success("Profile updated successfully");
+        toast.success("Profile updated successfully refresh the page to see changes");
     }
 
     const toggleFormVisibility = () => {

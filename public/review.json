@@ -1,0 +1,75 @@
+[
+    {
+      "user_name": "John Doe",
+      "user_image": "https://i.ibb.co/whJLf7Z/portrait-young-bearded-man-reading-book.jpg",
+      "brought_estate_title": "Luxury Beachfront Villa",
+      "segment_name": "Beachfront Properties",
+      "price": "$5,000,000",
+      "good_side": "Stunning ocean views, Private beach access and Infinity pool",
+      "bad_side": "Limited parking space and High maintenance costs",
+      "rating": 4.5,
+      "location": "Malibu, California",
+      "estate_image": "https://i.ibb.co/LNXFgWf/r1.jpg"
+    },
+    {
+      "user_name": "Alice Smith",
+      "user_image": "https://i.ibb.co/KsKJHSc/woman-checking-her-phone.jpg",
+      "brought_estate_title": "Mountain Retreat",
+      "segment_name": "Mountain Properties",
+      "price": "$3,200,000",
+      "good_side": "Tranquil surroundings and Ski-in/ski-out access, Private hiking trails",
+      "bad_side": "Remote location, Limited amenities",
+      "rating": 4.2,
+      "location": "Aspen, Colorado",
+      "estate_image": "https://i.ibb.co/ZKVZHPB/r2.jpg"
+    },
+    {
+      "user_name": "Emily Johnson",
+      "user_image": "https://i.ibb.co/9Tyn4nh/happy-woman-glasses-standing-wall.jpg",
+      "brought_estate_title": "City Penthouse",
+      "segment_name": "Penthouses",
+      "price": "$2,800,000",
+      "good_side": "Panoramic city views, Private rooftop terrace and High-end finishes, Smart home technology",
+      "bad_side": "High maintenance costs, Limited outdoor space",
+      "rating": 4.7,
+      "location": "Manhattan, New York",
+      "estate_image": "https://i.ibb.co/8YHhf10/r3.jpg"
+    },
+    {
+      "user_name": "Michael Brown",
+      "user_image": "https://i.ibb.co/NZQJGW4/business-man-by-skyscraper.jpg",
+      "brought_estate_title": "Lakefront Cottage",
+      "segment_name": "Waterfront Properties",
+      "price": "$1,500,000",
+      "good_side": "Serene lake views, Private dock and Waterfront access, Outdoor living space",
+      "bad_side": "Limited amenities, Seasonal weather conditions",
+      "rating": 4.0,
+      "location": "Lake Tahoe, Nevada",
+      "estate_image": "https://i.ibb.co/sspfKcZ/r4.jpg"
+    },
+    {
+      "user_name": "Sophia Wilson",
+      "user_image": "https://i.ibb.co/Bg9t1Nb/smiling-lawyer-posing.jpg",
+      "brought_estate_title": "Historic Manor House",
+      "segment_name": "Historic Properties",
+      "price": "$7,800,000",
+      "good_side": "Rich architectural details, Expansive grounds and Gardens, Historical significance",
+      "bad_side": "High maintenance costs, Limited modern amenities",
+      "rating": 4.8,
+      "location": "Cotswolds, England",
+      "estate_image": "https://i.ibb.co/PtnjbYf/r5.jpg"
+    },
+    {
+      "user_name": "William Lee",
+      "user_image": "https://i.ibb.co/FWHB5yT/profile.jpg",
+      "brought_estate_title": "Golf Course Estate",
+      "segment_name": "Golf Properties",
+      "price": "$4,500,000",
+      "good_side": "Golf course access, Resort-style amenities and Outdoor living spaces, Home theater and Wine cellar",
+      "bad_side": "Noise from nearby highway, Limited privacy",
+      "rating": 4.3,
+      "location": "Palm Springs, California",
+      "estate_image": "https://i.ibb.co/KD0kqJS/r6.jpg"
+    }
+  ]
+  
