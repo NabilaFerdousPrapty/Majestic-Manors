@@ -3,9 +3,10 @@ import { toast } from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import UseAuth from "../../hooks/UseAuth";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
   const { createUser,updateUserProfile } = UseAuth()
@@ -60,6 +61,9 @@ const Signup = () => {
   
   return (
     <div className="flex justify-center items-center mt-10">
+       <Helmet>
+      <title>Majestic Manors || SignUp</title>
+    </Helmet>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
         <h1 className="text-2xl font-bold text-center">Sign Up</h1>
         <form onSubmit={handleSubmit(onSubmit)} action="" className="space-y-6">
@@ -146,14 +150,22 @@ const Signup = () => {
             {errors.confirmPassword && <span className="text-red-600">Password confirmation is required</span>}
           </div>
 
+
           <button
             type="submit"
             className="block w-full p-3 text-center rounded-lg text-white bg-[#d19945]"
           >
             Sign Up
           </button>
+          <p className="text-xs text-center sm:px-6 text-gray-600">
+          Already have an account?
+          <Link to="/login" className="underline text-[#d19945]">
+            Sign in
+          </Link>
+        </p>
         </form>
       </div>
+     
     </div>
   );
 };

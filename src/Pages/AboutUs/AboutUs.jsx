@@ -1,11 +1,18 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import LocationMap from "../../components/LocationMap/LocationMap";
 
 const AboutUs = () => {
-  const [tabIndex,setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(0);
+  const coordinates = [51.505, -0.09];
+  const location = "London, United Kingdom";
 
   return (
     <div>
+      <Helmet>
+        <title>Majestic Manors || About us</title>
+      </Helmet>
       <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800 mb-10">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
           <img
@@ -46,9 +53,9 @@ const AboutUs = () => {
             Why Choose Majestic Manors?
           </h1>
           <p className="text-sm text-gray-600 ">
-          &nbsp;by&nbsp;
+            &nbsp;by&nbsp;
             <span className="underline text-[#d19945]">
-              Majestic Manors Team&nbsp; 
+              Majestic Manors Team&nbsp;
             </span>
             &nbsp;on
             <time datetime="2024-04-11">&nbsp;April 11th, 2024</time>
@@ -64,7 +71,6 @@ const AboutUs = () => {
             here to help you every step of the way.
           </p>
         </div>
-        
       </article>
 
       <section className="py-6 bg-gray-100 text-gray-900 my-8 rounded-2xl">
@@ -76,11 +82,21 @@ const AboutUs = () => {
               30-day free trial.
             </p>
             <div>
-              <button onClick={()=>setTabIndex(0)} className={`px-4 py-1 font-semibold border rounded-l-lg
-              ${tabIndex===0?'bg-[#d19945]':'text-black'} border-[#d19945] text-gray-50`}>
+              <button
+                onClick={() => setTabIndex(0)}
+                className={`px-4 py-1 font-semibold border rounded-l-lg
+              ${
+                tabIndex === 0 ? "bg-[#d19945] text-black" : "text-black"
+              } border-[#d19945]`}
+              >
                 Monthly
               </button>
-              <button onClick={()=>setTabIndex(1)} className={`px-4 py-1 border-[#d19945] border rounded-r-lg ${tabIndex===1?'bg-[#d19945]':''}`}>
+              <button
+                onClick={() => setTabIndex(1)}
+                className={`px-4 py-1 border-[#d19945] border rounded-r-lg ${
+                  tabIndex === 1 ? "bg-[#d19945] text-black" : "text-black"
+                }`}
+              >
                 Annually
               </button>
             </div>
@@ -126,9 +142,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Basic functionality
-                  </span>
+                  <span>Basic functionality</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -165,7 +179,10 @@ const AboutUs = () => {
                   <span>Suitable for personal use or small projects</span>
                 </li>
               </ul>
-              <Link to='/signup' className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 border-[#d19945]">
+              <Link
+                to="/signup"
+                className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 border-[#d19945]"
+              >
                 Subscribe
               </Link>
             </div>
@@ -175,10 +192,14 @@ const AboutUs = () => {
               </span>
               <p className="flex items-center justify-center my-6 space-x-2 font-bold">
                 <span className="text-lg line-through text-gray-700">
-                  &nbsp;{tabIndex===0?'$32':'$332'}&nbsp;
+                  &nbsp;{tabIndex === 0 ? "$32" : "$332"}&nbsp;
                 </span>
-                <span className="pb-2 text-4xl">{tabIndex===0?'$19':'$228'}</span>
-                <span className="text-lg">{tabIndex===0?"/mo":'/year'}</span>
+                <span className="pb-2 text-4xl">
+                  {tabIndex === 0 ? "$19" : "$228"}
+                </span>
+                <span className="text-lg">
+                  {tabIndex === 0 ? "/mo" : "/year"}
+                </span>
               </p>
               <ul className="flex-1 space-y-2">
                 <li className="flex items-center space-x-2">
@@ -196,9 +217,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Advanced functionality
-                  </span>
+                  <span>Advanced functionality</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -215,8 +234,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>Full access to premium features
-                  </span>
+                  <span>Full access to premium features</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -233,9 +251,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Suitable for professionals and businesses
-                  </span>
+                  <span>Suitable for professionals and businesses</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -252,9 +268,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Priority customer support
-                  </span>
+                  <span>Priority customer support</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -271,12 +285,13 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Regular updates and enhancements
-                  </span>
+                  <span>Regular updates and enhancements</span>
                 </li>
               </ul>
-              <Link to='/signup' className="px-8 py-3 mt-12 text-lg font-semibold uppercase rounded bg-[#d19945] text-gray-50">
+              <Link
+                to="/signup"
+                className="px-8 py-3 mt-12 text-lg font-semibold uppercase rounded bg-[#d19945] text-gray-50"
+              >
                 Subscribe
               </Link>
             </div>
@@ -286,10 +301,14 @@ const AboutUs = () => {
               </span>
               <p className="flex items-center justify-center my-6 space-x-2 font-bold">
                 <span className="text-lg line-through text-gray-700">
-                &nbsp;{tabIndex===0?'$48':'$420'}&nbsp;
+                  &nbsp;{tabIndex === 0 ? "$48" : "$420"}&nbsp;
                 </span>
-                <span className="pb-2 text-4xl">{tabIndex===0?'$37':'$444'}€</span>
-                <span className="text-lg">{tabIndex===0?"/mo":'/year'}</span>
+                <span className="pb-2 text-4xl">
+                  {tabIndex === 0 ? "$37" : "$444"}€
+                </span>
+                <span className="text-lg">
+                  {tabIndex === 0 ? "/mo" : "/year"}
+                </span>
               </p>
               <ul className="flex-1 space-y-2">
                 <li className="flex items-center space-x-2">
@@ -307,9 +326,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Comprehensive functionality
-                  </span>
+                  <span>Comprehensive functionality</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -326,9 +343,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Full access to all premium features
-                  </span>
+                  <span>Full access to all premium features</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -396,9 +411,7 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Priority support with SLA
-                  </span>
+                  <span>Priority support with SLA</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -415,48 +428,206 @@ const AboutUs = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                  <span>
-                  Integration options with enterprise systems
-                  </span>
+                  <span>Integration options with enterprise systems</span>
                 </li>
               </ul>
-              <Link to='/signup' className="px-8 py-3 mt-12 text-lg font-semibold uppercase border rounded border-[#d19945]">
+              <Link
+                to="/signup"
+                className="px-8 py-3 mt-12 text-lg font-semibold uppercase border rounded border-[#d19945]"
+              >
                 Subscribe
               </Link>
             </div>
           </div>
         </div>
       </section>
-      <section className="bg-gray-100 text-gray-800">
-	<div className="container max-w-5xl px-4 py-12 mx-auto">
-		<div className="grid gap-4 mx-4 sm:grid-cols-12">
-			<div className="col-span-12 sm:col-span-3">
-				<div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-indigo-600">
-					<h3 className="text-3xl font-semibold">Recent Articles</h3>
-					<span className="text-sm font-bold tracking-wider uppercase text-gray-600">Stay Updated</span>
-				</div>
-			</div>
-			<div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-				<div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300">
-					<div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-indigo-600">
-						<h3 className="text-xl font-semibold tracking-wide">Optimizing Your Workflow</h3>
-						<time className="text-xs tracking-wide uppercase text-gray-600">December 2023</time>
-						<p className="mt-3">Discover tips for optimizing your workflow and boosting productivity. Learn how to streamline processes and maximize efficiency.</p>
-					</div>
-					<div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-indigo-600">
-						<h3 className="text-xl font-semibold tracking-wide">Mastering Time Management</h3>
-						<time className="text-xs tracking-wide uppercase text-gray-600">July 2023</time>
-						<p className="mt-3">Explore strategies for mastering time management and effectively prioritizing tasks. Learn how to make the most of your time and achieve your goals.</p>
-					</div>
-					<div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-indigo-600">
-						<h3 className="text-xl font-semibold tracking-wide">Navigating Remote Work Challenges</h3>
-						<time className="text-xs tracking-wide uppercase text-gray-600">January 2023</time>
-						<p className="mt-3">Gain insights into navigating remote work challenges and maintaining productivity. Discover tools and techniques for effective remote collaboration.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+      <section className=" my-8 border-2 border-gray-100 rounded-3xl">
+        <h1 className="text-3xl font-bold text-center text-[#d19945]">
+          Our Location
+        </h1>
+        <p className="text-center font-bold py-6 text-3xl">
+          We are located in the heart of the city
+        </p>
+        <div className="rounded-lg">
+          <div className="flex justify-center p-2">
+            <LocationMap
+              location={location}
+              coordinates={coordinates}
+            ></LocationMap>
+          </div>
+        </div>
+      </section>
+      <section className="flex justify-center items-center">
+        <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-gray-50 text-gray-800">
+          <div className="flex flex-col w-full ">
+            <h2 className="text-3xl font-semibold text-center">
+              Customer reviews
+            </h2>
+            <div className="flex flex-wrap items-center mt-2 mb-1 space-x-2">
+              <div className="flex">
+                <button
+                  type="button"
+                  title="Rate 1 stars"
+                  aria-label="Rate 1 stars"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-6 h-6 text-yellow-500"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  title="Rate 2 stars"
+                  aria-label="Rate 2 stars"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-6 h-6 text-yellow-500"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  title="Rate 3 stars"
+                  aria-label="Rate 3 stars"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-6 h-6 text-yellow-500"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  title="Rate 4 stars"
+                  aria-label="Rate 4 stars"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-6 h-6 text-yellow-500"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  title="Rate 5 stars"
+                  aria-label="Rate 5 stars"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-6 h-6 text-gray-400"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                </button>
+              </div>
+              <span className="text-gray-600">4.4 out of 5</span>
+            </div>
+            <p className="text-sm text-gray-600">861 global ratings</p>
+            <div className="flex flex-col mt-4">
+              <div className="flex items-center space-x-1">
+                <span className="flex-shrink-0 w-12 text-sm">5 star</span>
+                <div className="flex-1 h-4 overflow-hidden rounded-sm bg-gray-300">
+                  <div className="bg-orange-300 h-4 w-5/6"></div>
+                </div>
+                <span className="flex-shrink-0 w-12 text-sm text-right">
+                  94%
+                </span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span className="flex-shrink-0 w-12 text-sm">4 star</span>
+                <div className="flex-1 h-4 overflow-hidden rounded-sm bg-gray-300">
+                  <div className="bg-orange-300 h-4 w-4/6"></div>
+                </div>
+                <span className="flex-shrink-0 w-12 text-sm text-right">
+                  71%
+                </span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span className="flex-shrink-0 w-12 text-sm">3 star</span>
+                <div className="flex-1 h-4 overflow-hidden rounded-sm bg-gray-300">
+                  <div className="bg-orange-300 h-4 w-3/6"></div>
+                </div>
+                <span className="flex-shrink-0 w-12 text-sm text-right">
+                  44%
+                </span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span className="flex-shrink-0 w-12 text-sm">2 star</span>
+                <div className="flex-1 h-4 overflow-hidden rounded-sm bg-gray-300">
+                  <div className="bg-orange-300 h-4 w-2/6"></div>
+                </div>
+                <span className="flex-shrink-0 w-12 text-sm text-right">
+                  39%
+                </span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <span className="flex-shrink-0 w-12 text-sm">1 star</span>
+                <div className="flex-1 h-4 overflow-hidden rounded-sm bg-gray-300">
+                  <div className="bg-orange-300 h-4 w-1/6"></div>
+                </div>
+                <span className="flex-shrink-0 w-12 text-sm text-right">
+                  17%
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style={{backgroundImage: `url('https://i.ibb.co/FVHfrjY/About.png')`}} className="py-6 bg-gray-100 text-gray-900 rounded-xl mt-5 bg-cover bg-center bg-no-repeat brightness-75">
+  <div className="container mx-auto flex flex-col justify-around p-4 text-center md:p-10 lg:flex-row">
+    <div className="flex flex-col justify-center lg:text-left">
+      <p className="mb-1 text-sm font-medium tracking-widest uppercase text-white">
+        Discover the Best
+      </p>
+      <h1 className="py-2 text-3xl font-medium leading-tight title-font text-white">
+        Eco-Friendly Cleaning Solutions
+      </h1>
+    </div>
+    <div className="flex flex-col items-center justify-center flex-shrink-0 mt-6 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 lg:ml-4 lg:mt-0 lg:justify-end">
+      <button className="inline-flex items-center px-6 py-3 rounded-lg bg-[#d19945] text-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          className="fill-current w-7 h-7 text-gray-50"
+        >
+          <path d="M 5.4160156 2.328125 L 12.935547 10.158203 C 13.132547 10.363203 13.45925 10.363203 13.65625 10.158203 L 15.179688 8.5742188 C 15.405688 8.3392188 15.354312 7.956875 15.070312 7.796875 C 11.137313 5.571875 6.2620156 2.811125 5.4160156 2.328125 z M 3.140625 2.8476562 C 3.055625 3.0456562 3 3.2629063 3 3.5039062 L 3 20.591797 C 3 20.788797 3.044375 20.970625 3.109375 21.140625 L 11.576172 12.324219 C 11.762172 12.131219 11.762172 11.826813 11.576172 11.632812 L 3.140625 2.8476562 z M 17.443359 9.2578125 C 17.335484 9.2729375 17.233297 9.32375 17.154297 9.40625 L 15.015625 11.632812 C 14.829625 11.825812 14.829625 12.130219 15.015625 12.324219 L 17.134766 14.529297 C 17.292766 14.694297 17.546141 14.729188 17.744141 14.617188 C 19.227141 13.777188 20.226563 13.212891 20.226562 13.212891 C 20.725562 12.909891 21.007 12.443547 21 11.935547 C 20.992 11.439547 20.702609 10.981938 20.224609 10.710938 C 20.163609 10.676937 19.187672 10.124359 17.763672 9.3183594 C 17.664172 9.2623594 17.551234 9.2426875 17.443359 9.2578125 z M 13.296875 13.644531 C 13.165875 13.644531 13.034047 13.696328 12.935547 13.798828 L 5.4746094 21.566406 C 6.7566094 20.837406 11.328781 18.249578 15.050781 16.142578 C 15.334781 15.981578 15.386156 15.599281 15.160156 15.363281 L 13.65625 13.798828 C 13.55775 13.696328 13.427875 13.644531 13.296875 13.644531 z"></path>
+        </svg>
+        <span className="flex flex-col items-start ml-4 leading-none">
+          <span className="mb-1 text-xs">GET IT ON</span>
+          <span className="font-semibold title-font">Google Play</span>
+        </span>
+      </button>
+      <button className="inline-flex items-center px-5 py-3 rounded-lg bg-[#d19945] text-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 50 50"
+          className="fill-current w-7 h-7 text-gray-50"
+        >
+          <path d="M 44.527344 34.75 C 43.449219 37.144531 42.929688 38.214844 41.542969 40.328125 C 39.601563 43.28125 36.863281 46.96875 33.480469 46.992188 C 30.46875 47.019531 29.691406 45.027344 25.601563 45.0625 C 21.515625 45.082031 20.664063 47.03125 17.648438 47 C 14.261719 46.96875 11.671875 43.648438 9.730469 40.699219 C 4.300781 32.429688 3.726563 22.734375 7.082031 17.578125 C 9.457031 13.921875 13.210938 11.773438 16.738281 11.773438 C 20.332031 11.773438 22.589844 13.746094 25.558594 13.746094 C 28.441406 13.746094 30.195313 11.769531 34.351563 11.769531 C 37.492188 11.769531 40.8125 13.480469 43.1875 16.433594 C 35.421875 20.691406 36.683594 31.78125 44.527344 34.75 Z M 31.195313 8.46875 C 32.707031 6.527344 33.855469 3.789063 33.4375 1 C 30.972656 1.167969 28.089844 2.742188 26.40625 4.78125 C 24.878906 6.640625 23.613281 9.398438 24.105469 12.066406 C 26.796875 12.152344 29.582031 10.546875 31.195313 8.46875 Z"></path>
+        </svg>
+        <span className="flex flex-col items-start ml-4 leading-none">
+          <span className="mb-1 text-xs">Download on the</span>
+          <span className="font-semibold title-font">App Store</span>
+        </span>
+      </button>
+    </div>
+  </div>
 </section>
 
     </div>

@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Agents from "../../components/Agents/Agents";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+
 
 const Services = () => {
   const [agents,setAgents] = useState([]);
@@ -13,6 +15,9 @@ const Services = () => {
   },[])
   return (
     <div className="mt-3">
+       <Helmet>
+      <title>Majestic Manors || Services</title>
+    </Helmet>
       <div className="p-6 py-12  bg-[#C9BDAB] text-white rounded-2xl mb-8">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -282,7 +287,7 @@ const Services = () => {
         style={{ backgroundImage: "url('https://i.ibb.co/P9213SS/bg.png')" }}
         className="bg-cover bg-center bg-no-repeat h-[500px] md:h-[400px] flex items-center justify-center text-white text-center rounded-2xl mt-6 "
       >
-        <div className="  py-10 md:py-8 md:px-8 px-3 bg-[#7a7c81] text-white rounded-bl-3xl  rounded-tr-3xl animate__animated animate__pulse max-w-md">
+        <div className="mx-1  py-10 md:py-8 md:px-8 px-3 bg-[#7a7c81] text-white rounded-bl-3xl  rounded-tr-3xl animate__animated animate__pulse max-w-sm lg:max-w-md">
           <h1 className="text-4xl font-bold py-3">Become a host</h1>
           <p className="pt-2 pb-4">
           Join the elite league of  hosts specializing in luxury villas and unlock a world of exclusive opportunities.

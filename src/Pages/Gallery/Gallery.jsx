@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import UserReview from "../../components/UserReview/UserReview";
+import { Helmet } from "react-helmet-async";
+
 
 const Gallery = () => {
   const [reviews, setReviews] = useState([]);
@@ -13,6 +15,9 @@ const Gallery = () => {
   }, []);
   return (
     <div>
+       <Helmet>
+      <title>Majestic Manors || Gallery</title>
+    </Helmet>
       <div className="mt-8 ">
         <h2 className="text-5xl text-center text-[#d19945] my-4">
           Get to know what others say about us

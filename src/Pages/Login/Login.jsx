@@ -7,6 +7,7 @@ import { toast } from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { signInUser, googleSignIn, githubSignIn } = UseAuth();
   const [showPassword, setShowPassword] = useState(false);
@@ -54,6 +55,9 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center mt-10">
+       <Helmet>
+      <title>Majestic Manors || Login</title>
+    </Helmet>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-50 text-gray-800">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form onSubmit={handleSubmit(onSubmit)} action="" className="space-y-6">

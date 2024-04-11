@@ -1,6 +1,6 @@
 import { Marker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-
+import { CiLocationOn } from "react-icons/ci";
 const LocationMap = ({coordinates,location}) => {
   //  console.log(coordinates);
   const position = coordinates;
@@ -13,9 +13,11 @@ const LocationMap = ({coordinates,location}) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
+      
         <Popup>
           {location}
         </Popup>
+     
       </Marker>
     </MapContainer>
   )

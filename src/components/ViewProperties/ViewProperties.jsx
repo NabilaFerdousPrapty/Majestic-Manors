@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import LocationMap from "../LocationMap/LocationMap";
 import { toast } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const ViewProperties = () => {
   const { id } = useParams();
@@ -24,6 +25,9 @@ const ViewProperties = () => {
   return (
     <>
       <div className="max-w-full p-4 shadow-md bg-gray-50 text-gray-800">
+        <Helmet>
+          <title>{estate_title}</title>
+        </Helmet>
         <div className="flex justify-between pb-4 border-bottom">
           <div className="flex items-center">
             <a className="mb-0 capitalize text-gray-800">{segment_name}</a>
