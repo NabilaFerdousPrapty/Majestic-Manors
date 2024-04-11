@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 const Agents = ({agent}) => {
-    const {name,photo,bio,experience_level,total_sold_properties,department,contact}=agent;
+    const {name,photo,bio,experience_level,contact}=agent;
   return (
     <div>
       <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg h-full justify-between">
@@ -57,3 +58,6 @@ const Agents = ({agent}) => {
 };
 
 export default Agents;
+ Agents.propTypes = {
+    agent: PropTypes.object.isRequired,
+ }
