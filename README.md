@@ -58,7 +58,7 @@ Majestic Manors is a luxury real estate platform offering a curated selection of
 - Error handling for incorrect credentials.
 
 ## Data
-- Data for exclusive estates stored in JSON format, with a minimum of four and a maximum of nine entries per category. Also have Json Data for agents and reviews of my website data in json format.
+- Data for exclusive estates stored in JSON format, with a  nine entries per category. Also have Json Data for agents and reviews of my website data in json format.Data is fetched and shown from local json file
 
 ## 404 Page
 - Custom 404 route to handle page not found errors.
@@ -67,13 +67,13 @@ Majestic Manors is a luxury real estate platform offering a curated selection of
 - Each page has a dynamic title reflecting its content or purpose.
 
 ## Folder Structure
+```
 Majestic Manors/
 │
 ├── public/
-│   ├── index.html
+│   ├── agents.json
 │   ├── realEstateProperty.json
-│   ├── review.json
-│   └── agents.json
+│   └── review.json 
 │
 └── src/
     │
@@ -117,6 +117,7 @@ Majestic Manors/
     │
     └── router.jsx
 
+```
 
 
 ## Dependencies
