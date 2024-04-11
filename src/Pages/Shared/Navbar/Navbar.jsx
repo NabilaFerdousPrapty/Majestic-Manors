@@ -2,6 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import img from "../../../assets/user.png"
 import "../../../assets/style.css";
 import UseAuth from "../../../hooks/UseAuth";
+import { LuLogOut } from "react-icons/lu";
+import { GrUpdate } from "react-icons/gr";
+import { CiLogin } from "react-icons/ci";
 const Navbar = () => {
   const { logOut, user } = UseAuth();
   return (
@@ -85,24 +88,24 @@ const Navbar = () => {
               <li className="md:pt-3 py-1 ">
                 <button
                   onClick={() => logOut()}
-                  className=" bg-[#d19945] px-2 py-1 rounded-md  text-white justify-center"
+                  className=" bg-[#d19945] px-2 py-1 rounded-md text-xs  text-white justify-center"
                 >
-                  Log Out
+                 <LuLogOut /> Log Out
                 </button>
               </li>
               <li className=" py-1 ">
                 <Link to="/updateProfile"
                   
-                  className=" bg-[#d19945] px-2 py-1 rounded-md  text-white justify-center"
+                  className=" bg-[#d19945] px-2 py-1 rounded-md text-xs text-white justify-center"
                 >
-                  Update Profile
+                <GrUpdate />  Update Profile
                 </Link>
               </li>
             </ul>
           </div>
         ) : (
-          <Link to="/login" className="btn bg-[#d19945] lg:px-7">
-            Login
+          <Link to="/login" className="btn bg-[#d19945] lg:px-8">
+           <CiLogin /> Login
           </Link>
         )}
       </div>
