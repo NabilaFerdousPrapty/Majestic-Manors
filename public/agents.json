@@ -1,0 +1,74 @@
+[
+    {
+    "name": "John Smith",
+    "photo": "https://i.ibb.co/T1xrbzL/1.jpg",
+    "total_sold_properties": 112,
+    "department": "Luxury Estates",
+    "experience_level": "Senior",
+    "bio": "John Smith is a seasoned real estate agent with over 15 years of experience. Specializing in luxury properties, he has helped numerous clients find their dream homes. With his expertise and dedication, John ensures a smooth and successful transaction for every client.",
+    "contact": {
+      "phone": "+1 (123) 456-7890",
+      "email": "john.smith@example.com"
+    }
+  },
+  {
+    "name": "Kelly Johnson",
+    "photo": "https://i.ibb.co/prH7Twc/2.jpg",
+    "total_sold_properties": 98,
+    "department": "Residential Properties",
+    "experience_level": "Senior",
+    "bio": "Kelly Johnson is a highly skilled real estate agent with a passion for helping clients find the perfect home. With nearly two decades of experience in the industry, she has built a reputation for her professionalism and attention to detail.",
+    "contact": {
+      "phone": "+1 (234) 567-8901",
+      "email": "emily.johnson@example.com"
+    }
+  },
+  {
+    "name": "Michael Williams",
+    "photo": "https://i.ibb.co/4ZXqXdz/3.jpg",
+    "total_sold_properties": 85,
+    "department": "Commercial Real Estate",
+    "experience_level": "Senior",
+    "bio": "Michael Williams is an expert in commercial real estate with extensive experience in sales, leasing, and property management. He has a proven track record of success and is committed to helping clients achieve their investment goals.",
+    "contact": {
+      "phone": "+1 (345) 678-9012",
+      "email": "michael.williams@example.com"
+    }
+  },
+  {
+    "name": "Sophia Brown",
+    "photo": "https://i.ibb.co/kqwYwvH/e5.jpg",
+    "total_sold_properties": 76,
+    "department": "Luxury Estates",
+    "experience_level": "Intermediate",
+    "bio": "Sophia Brown is a dedicated real estate agent specializing in luxury estates. With a keen eye for detail and a passion for exceptional service, she goes above and beyond to exceed her clients' expectations.",
+    "contact": {
+      "phone": "+1 (456) 789-0123",
+      "email": "sophia.brown@example.com"
+    }
+  },
+  {
+    "name": "William Miller",
+    "photo": "https://i.ibb.co/ZTdmr2j/e5.jpg",
+    "total_sold_properties": 64,
+    "department": "Residential Properties",
+    "experience_level": "Intermediate",
+    "bio": "William Miller brings a fresh perspective to residential real estate. His energetic approach and commitment to client satisfaction make him a valuable asset to anyone looking to buy or sell a home.",
+    "contact": {
+      "phone": "+1 (567) 890-1234",
+      "email": "william.miller@example.com"
+    }
+  },
+  {
+    "name": "Olivia Davis",
+    "photo": "https://i.ibb.co/ZTdmr2j/e6.jpg",
+    "total_sold_properties": 58,
+    "department": "Commercial Real Estate",
+    "experience_level": "Intermediate",
+    "bio": "Olivia Davis specializes in commercial real estate, helping clients navigate complex transactions with ease. Her strategic thinking and negotiation skills have earned her the trust of investors and business owners alike.",
+    "contact": {
+      "phone": "+1 (678) 901-2345",
+      "email": "olivia.davis@example.com"
+    }
+  }
+]

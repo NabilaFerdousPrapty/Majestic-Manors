@@ -1,17 +1,15 @@
-import { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useEffect } from "react";
+import { useState } from "react";
+import Agents from "../../components/Agents/Agents";
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-
-
-
-// import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
 const Services = () => {
+  const [agents,setAgents] = useState([]);
+  console.log(agents);
+  useEffect(()=>{
+    fetch('/agents.json')
+    .then((res)=>res.json())
+    .then((data)=>setAgents(data))
+  },[])
   return (
     <div className="mt-3">
       <div className="p-6 py-12  bg-[#C9BDAB] text-white rounded-2xl mb-8">
@@ -36,7 +34,7 @@ const Services = () => {
         </div>
       </div>
       <h2 className="text-center my-8 text-4xl text-[#d19459]">Our Services</h2>
-      <section className="bg-gray-100 text-gray-800 p-8 rounded-xl">
+      <section className="bg-gray-100 text-gray-800 lg:p-8 p-2 rounded-xl">
         <div className="container flex flex-col-reverse mx-auto lg:flex-row">
           <div className="flex flex-col px-6 py-8 space-y-6  sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 bg-[#d19459] text-white rounded-xl">
             <div className="flex space-x-4">
@@ -272,10 +270,12 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className=" my-10">
         <h2 className="text-5xl text-center font-bold">Meet our agents</h2>
-      <div>
-        
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {
+          agents.map((agent,idx)=><Agents agent={agent} key={idx}></Agents>)
+        }
       </div>
       </section>
     </div>
