@@ -8,7 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 # Majestic Manors
-## Live Site:https://majestic-manors.web.app/
+## Live Site: [https://majestic-manors.web.app/](https://majestic-manors.web.app/)
 
 Majestic Manors is a luxury real estate website designed to showcase premium properties such as penthouses, beachfront properties, resorts, private islands, villas, and mansions. With a unique design and user-friendly interface, Majestic Manors aims to provide an exceptional experience for users searching for their dream properties.
 
@@ -20,10 +20,12 @@ Majestic Manors is a luxury real estate website designed to showcase premium pro
 5. [Data](#data)
 6. [404 Page](#404-page)
 7. [Dynamic Title](#dynamic-title)
-8. [Dependencies](#dependencies)
-9. [TechnologiesUsed] (#TechnologiesUsed)
-10. [Contributing] (#Contributing)
-11. [License] (#License)
+8. [Folder Structure](#folder-structure)
+9. [Dependencies](#dependencies)
+10. [Setup Instructions](#setup-instructions)
+11. [Technologies Used](#technologies-used)
+12. [Contributing](#contributing)
+13. [License](#license)
 
 
 ## Introduction
@@ -36,9 +38,8 @@ Majestic Manors is a luxury real estate platform offering a curated selection of
 - **Banner Slider**: The homepage features a banner slider with four slides, implemented using the Swiper slider.
 - **Exclusive Estate Section**: Users can explore exclusive estates categorized as Residential, each containing relevant information such as image, title, ID, segment name, description, price, status (sale/rent), area, location, facilities, and a "View Property" button.
 - **Estate Details Page**: Clicking the "View Property" button redirects users to the estate details page, a protected route requiring login authentication. The page displays detailed information about the selected property.
-- **404 Page**: Custom 404 route for handling page not found errors.
+- **404 Page**: Custom 404 route to handle page not found errors.
 - **Dynamic Title**: Each page has a dynamic title reflecting its content or purpose.
-- **Persistent User Information**: User information persists in the navbar even after reloading the page, with a loader displayed during authentication.
 
 ## Pages
 - Home
@@ -57,13 +58,66 @@ Majestic Manors is a luxury real estate platform offering a curated selection of
 - Error handling for incorrect credentials.
 
 ## Data
-- Data for exclusive estates stored in JSON format, with a minimum of four and a maximum of nine entries per category.Also have Json Data for agents and reviews of my website data in json format
+- Data for exclusive estates stored in JSON format, with a minimum of four and a maximum of nine entries per category. Also have Json Data for agents and reviews of my website data in json format.
 
 ## 404 Page
 - Custom 404 route to handle page not found errors.
 
 ## Dynamic Title
 - Each page has a dynamic title reflecting its content or purpose.
+
+## Folder Structure
+Majestic Manors/
+│
+├── public/
+│   ├── index.html
+│   ├── realEstateProperty.json
+│   ├── review.json
+│   └── agents.json
+│
+└── src/
+    │
+    ├── assets/
+    │   ├── style.css
+    │   └── images/  (or any other subfolders for images)
+    │
+    ├── AuthProvider/
+    │   └── AuthProvider.jsx
+    │
+    ├── components/
+    │   ├── Agents/
+    │   ├── Banner/
+    │   ├── Contact/
+    │   ├── Estates/
+    │   ├── FAQ/
+    │   ├── LocationMap/
+    │   ├── ScrollToTop/
+    │   ├── SingleEstate/
+    │   ├── UserReview/
+    │   ├── ViewProperties/
+    │   └── Private/
+    │
+    ├── Firebase/
+    │   └── hooks/
+    │       └── useAuth.jsx
+    │
+    ├── layouts/
+    │   └── MainLayout.jsx
+    │
+    ├── pages/
+    │   ├── AboutUs/
+    │   ├── Error/
+    │   ├── Gallery/
+    │   ├── Home/
+    │   ├── Login/
+    │   ├── Services/
+    │   ├── Shared/
+    │   ├── SignUp/
+    │   └── UpdateProfile/
+    │
+    └── router.jsx
+
+
 
 ## Dependencies
 - [react-icons](https://www.npmjs.com/package/react-icons)
@@ -73,14 +127,21 @@ Majestic Manors is a luxury real estate platform offering a curated selection of
 - [swiper](https://swiperjs.com/get-started)
 - [react-helmet-async](https://www.npmjs.com/package/react-helmet-async)
 - [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
+
 ## Technologies Used
 - React
 - JavaScript (ES6+)
 - HTML5
 - CSS3 (with Flexbox and Grid)
 - Firebase
-- Tailwind Daisy ui mamba ui
+- Tailwind CSS
 
+## Setup Instructions
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run `npm run dev` to start the development server.
+5. Open your browser and visit `http://localhost:3000` to view the website.
 
 ## Contributing
 Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests to improve the Majestic Manors project.
@@ -88,6 +149,4 @@ Contributions are welcome! Feel free to submit bug reports, feature requests, or
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
-### Feel free to reach out to us if you have any questions, feedback, or inquiries about Majestic Manors. Whether you're interested in exploring our exclusive estates, need assistance with authentication, or have suggestions for improving your browsing experience, our dedicated team is here to assist you. We value your input and are committed to providing exceptional service to our users. Don't hesitate to contact us via email, phone, or through the contact form on our website. Your satisfaction is our top priority, and we look forward to serving you with excellence.Feel free to contribute to our website as well 🏗️🏛️🏫🏨.
-
-
+### Feel free to reach out to us if you have any questions, feedback, or inquiries about Majestic Manors. Whether you're interested in exploring our exclusive estates, need assistance with authentication, or have suggestions for improving your browsing experience, our dedicated team is here to assist you. We value your input and are committed to providing exceptional service to our users. Don't hesitate to contact us via email, phone, or through the contact form on our website. Your satisfaction is our top priority, and we look forward to serving you with excellence. Feel free to contribute to our website as well 🏗️🏛️🏫🏨.
