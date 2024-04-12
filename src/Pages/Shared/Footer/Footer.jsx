@@ -15,6 +15,7 @@ const Footer = () => {
                 </Link>
               </span>
             </a>
+            <img src="" alt="" />
             <p className="mt-4 text-sm text-center lg:text-left">
               Discover the essence of luxury living with Majestic Manors. <br /> Explore our exclusive collection of <br /> premium homes designed for modern lifestyles.
             </p>
@@ -135,6 +136,7 @@ const Footer = () => {
         </div>
         <div className="py-6 text-sm text-center text-gray-600">
           &copy; {new Date().getFullYear()} Majestic Manors. All rights reserved.
+         <p> Designed and developed by<span className="text-[#d19945]">{" Nabila Ferdous Prapty"}</span> </p>
         </div>
       </footer>
     </div>

@@ -13,7 +13,7 @@ const AboutUs = () => {
       <Helmet>
         <title>Majestic Manors || About us</title>
       </Helmet>
-      <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800 mb-10">
+      <div className="p-5 mx-auto sm:p-10 md:p-16 bg-gray-100 text-gray-800 mb-10 rounded-md">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
           <img
             src="https://i.ibb.co/wwfPWKh/travel-relaxation-umbrella-luxury-hotels.jpg"
@@ -44,7 +44,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <article className="max-w-2xl px-6 py-24 mx-auto space-y-12 bg-gray-100 text-gray-900">
+      <article className="max-w-2xl px-6 py-24 mx-auto space-y-12 bg-gray-100 text-gray-900 rounded-md">
         <div className="w-full mx-auto space-y-4 text-center">
           <p className="text-xs font-semibold tracking-wider uppercase">
             #LuxuryRealEstate
