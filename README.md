@@ -116,7 +116,6 @@ Majestic Manors/
     │   └── UpdateProfile/
     │
     └── router.jsx
-
 ```
 
 

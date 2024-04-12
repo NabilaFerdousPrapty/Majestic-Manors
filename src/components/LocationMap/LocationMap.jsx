@@ -1,6 +1,6 @@
 import { Marker, MapContainer, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { CiLocationOn } from "react-icons/ci";
+import PropTypes from 'prop-types';
 const LocationMap = ({coordinates,location}) => {
   //  console.log(coordinates);
   const position = coordinates;
@@ -24,3 +24,8 @@ const LocationMap = ({coordinates,location}) => {
 };
 
 export default LocationMap;
+
+LocationMap.propTypes = {
+  coordinates: PropTypes.array.isRequired,
+  location: PropTypes.string.isRequired
+};
