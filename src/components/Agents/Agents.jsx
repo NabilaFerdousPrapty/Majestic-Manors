@@ -3,7 +3,7 @@ const Agents = ({agent}) => {
     const {name,photo,bio,experience_level,contact}=agent;
   return (
     <div>
-      <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg h-full justify-between">
+      <div className="flex flex-col max-w-sm mx-4 my-3 md:my-6 shadow-lg h-full justify-between">
         <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-50">
         <p className="text-xl text-[#d19945] text-center"> Description </p>
           <p className="relative px-6 py-1  italic text-center text-gray-800">

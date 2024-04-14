@@ -102,7 +102,7 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto auto-rows-fr lg:max-w-full lg:gap-2 xl:gap-6 lg:grid-cols-3">
-            <div className="relative z-0 flex flex-col items-center p-8 border rounded-md">
+            <div className="relative z-0 flex flex-col items-center p-8  rounded-md md:border-0 border-2 border-[#d19459] border-dashed ">
               <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg bg-[#d19945] text-gray-50">
                 Personal
               </span>
@@ -295,7 +295,7 @@ const AboutUs = () => {
                 Subscribe
               </Link>
             </div>
-            <div className="relative z-0 flex flex-col items-center p-8 border rounded-md bg-gray-100">
+            <div className="relative z-0 flex flex-col items-center p-8  bg-gray-100 md:border-0 border-2 border-[#d19459] border-dashed rounded-md">
               <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg bg-[#d19945] text-gray-50">
                 Enterprise
               </span>

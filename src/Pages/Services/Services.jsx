@@ -134,14 +134,14 @@ const Services = () => {
       </section>
       <section className="my-8 bg-gray-100 text-gray-800 lg:p-4 rounded-2xl">
         <div className="container mx-auto p-4 my-6 space-y-2 text-center">
-          <h2 className="text-5xl font-bold">Discover Majestic Manors</h2>
+          <h2 className="md:text-5xl text-3xl font-bold">Discover Majestic Manors</h2>
           <p className="text-gray-600">
             Experience unparalleled luxury and elegance with Majestic Manors'
             exclusive properties.
           </p>
         </div>
-        <div className="container mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
-          <div className="flex flex-col items-center p-4">
+        <div className="container mx-auto grid justify-center gap-4 sm:grid-cols-2 lg:grid-cols-3 px-1">
+          <div className="flex flex-col items-center p-4 md:border-0 border-2 border-[#d19459] border-dashed rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -154,14 +154,14 @@ const Services = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <h3 className="my-3 text-3xl font-semibold">Luxury Estates</h3>
-            <div className="space-y-1 leading-tight">
+            <h3 className="my-3 text-3xl font-semibold text-center text-2xl">Luxury Estates</h3>
+            <div className="space-y-1 leading-tight text-center">
               <p>Experience opulent living</p>
               <p>Impeccable design and craftsmanship</p>
               <p>Breathtaking views and amenities</p>
             </div>
           </div>
-          <div className="flex flex-col items-center p-4">
+          <div className="flex flex-col items-center p-4 md:border-0 border-2 border-[#d19459] border-dashed rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -174,16 +174,16 @@ const Services = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <h3 className="my-3 text-3xl font-semibold">
+            <h3 className="my-3 text-3xl font-semibold text-center text-2xl">
               Professional Guidance
             </h3>
-            <div className="space-y-1 leading-tight">
+            <div className="space-y-1 leading-tight text-center">
               <p>Expert assistance throughout your property journey</p>
               <p>Customized solutions tailored to your needs</p>
               <p>Unmatched attention to detail and service</p>
             </div>
           </div>
-          <div className="flex flex-col items-center p-4">
+          <div className="flex flex-col items-center p-4 md:border-0 border-2 border-[#d19459] border-dashed rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -196,15 +196,15 @@ const Services = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <h3 className="my-3 text-3xl font-semibold">Luxury Lifestyle</h3>
-            <div className="space-y-1 leading-tight">
+            <h3 className="my-3 text-3xl font-semibold text-center text-2xl">Luxury Lifestyle</h3>
+            <div className="space-y-1 leading-tight text-center">
               <p>Indulge in a life of luxury and sophistication</p>
               <p>Exclusive access to elite amenities</p>
               <p>Unparalleled comfort and convenience</p>
             </div>
           </div>
 
-          <div className="flex flex-col items-center p-4">
+          <div className="flex flex-col items-center p-4 md:border-0 border-2 border-[#d19459] border-dashed rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -217,14 +217,14 @@ const Services = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <h3 className="my-3 text-3xl font-semibold">Exclusive Amenities</h3>
-            <div className="space-y-1 leading-tight">
+            <h3 className="my-3 text-3xl font-semibold text-center text-2xl">Exclusive Amenities</h3>
+            <div className="space-y-1 leading-tight text-center">
               <p>Access to world-class amenities</p>
               <p>Designed for luxury living</p>
               <p>Enhance your lifestyle</p>
             </div>
           </div>
-          <div className="flex flex-col items-center p-4">
+          <div className="flex flex-col items-center p-4 md:border-0 border-2 border-[#d19459] border-dashed rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -237,16 +237,16 @@ const Services = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <h3 className="my-3 text-3xl font-semibold">
+            <h3 className="my-3 text-3xl font-semibold text-center text-2xl">
               Personalized Service
             </h3>
-            <div className="space-y-1 leading-tight">
+            <div className="space-y-1 leading-tight text-center">
               <p>Dedicated concierge services</p>
               <p>Meet your unique needs</p>
               <p>Exceptional customer care</p>
             </div>
           </div>
-          <div className="flex flex-col items-center p-4">
+          <div className="flex flex-col items-center p-4 md:border-0 border-2 border-[#d19459] border-dashed rounded-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -259,10 +259,10 @@ const Services = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-            <h3 className="my-3 text-3xl font-semibold">
+            <h3 className="my-3 md:text-3xl text-2xl font-semibold text-center">
               Discover Daily Deals
             </h3>
-            <div className="space-y-1 leading-tight">
+            <div className="space-y-1 leading-tight text-center">
               <p>
                 Get notified about exclusive deals and discounts on luxury
               </p>
@@ -275,8 +275,8 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section className=" my-10">
-        <h2 className="text-5xl text-center font-bold">Meet our agents</h2>
+      <section className=" md:my-10">
+        <h2 className="md:text-5xl text-3xl text-center font-bold">Meet our agents</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {
           agents.map((agent,idx)=><Agents agent={agent} key={idx}></Agents>)
