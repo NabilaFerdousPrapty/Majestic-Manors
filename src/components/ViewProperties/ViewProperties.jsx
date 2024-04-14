@@ -87,7 +87,7 @@ const ViewProperties = () => {
         We are here to help you to reach the specific location of the
         property.Still you have any query then contact us.
       </p>
-      <div className="md:h-screen w-full px-1 h-3/6">
+      <div className="md:h-1/6 w-full px-1 h-3/6">
         <LocationMap coordinates={coordinates} location={location} />
       </div>
     </>

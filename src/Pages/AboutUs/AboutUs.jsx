@@ -449,7 +449,7 @@ const AboutUs = () => {
           We are located in the heart of the city
         </p>
         <div className="rounded-lg">
-          <div className="flex justify-center p-2">
+          <div className="flex justify-center p-2 h-screen-100px md:h-screen-250px w-full">
             <LocationMap
               location={location}
               coordinates={coordinates}
