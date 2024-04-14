@@ -75,7 +75,7 @@
   "status": "sale",
   "area": "20 acres",
   "location": "Maui, Hawaii",
-  "facilities": ["Private villas", "Spa & wellness center", "Gourmet dining", "Outdoor activities"],
+  "facilities": ["Private villas", "Spa center", "Gourmet dining", "Outdoor activities"],
   "coordinates": [20.7984, -156.3319]
 }
 ,
@@ -103,7 +103,7 @@
   "status": "sale",
   "area": "6000 sqft",
   "location": "Bahamas",
-  "facilities": ["Infinity pool", "Outdoor lounge area", "Boat dock", "Private beach"],
+  "facilities": ["Infinity pool", "Outdoor lounge", "Boat dock", "Private beach"],
   "coordinates": [25.0343, -77.3963]
 }
 ,
