@@ -304,7 +304,7 @@ const AboutUs = () => {
                   &nbsp;{tabIndex === 0 ? "$48" : "$420"}&nbsp;
                 </span>
                 <span className="pb-2 text-4xl">
-                  {tabIndex === 0 ? "$37" : "$444"}€
+                  {tabIndex === 0 ? "$37" : "$444"}
                 </span>
                 <span className="text-lg">
                   {tabIndex === 0 ? "/mo" : "/year"}
