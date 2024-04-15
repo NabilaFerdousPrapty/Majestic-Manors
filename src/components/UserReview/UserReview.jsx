@@ -33,7 +33,7 @@ const UserReview = ({ review }) => {
               <p className="text-[#d19945]">My brought Price:<span className='text-gray-800'>{price}</span></p>
               <p className="text-[#d19945]">The good aspects:<span className='text-gray-800'>{good_side}</span></p>
               <p className="text-[#d19945]">The not so good aspects:<span className='text-gray-800'>{bad_side}</span> </p>
-              <p className="text-[#d19945] flex gap-3">My rating:<span className='text-gray-800 flex items-center'>{rating}<FaStarHalfAlt /></span> </p>
+              <p className="text-[#d19945] justify-center items-center flex gap-3 md:justify-start">My rating:<span className='text-gray-800 flex items-center'>{rating}<FaStarHalfAlt className='text-[#d19945]' /></span> </p>
             </div>
             <img src={estate_image} alt="" className='w-[260px] h-[260px] rounded-xl' />
           </div>

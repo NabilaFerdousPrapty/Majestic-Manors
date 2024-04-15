@@ -80,10 +80,10 @@ const ViewProperties = () => {
           </button>
         </div>
       </div>
-      <h2 className="text-center text-4xl font-bold text-[#d19945] pt-9">
+      <h2 className="text-center md:text-4xl text-2xl font-bold text-[#d19945] pt-9">
         Get The Specific Location By Map{" "}
       </h2>
-      <p className="text-center pb-8 pt-3">
+      <p className="text-center pb-8 pt-3 text-sm md:text-base">
         We are here to help you to reach the specific location of the
         property.Still you have any query then contact us.
       </p>

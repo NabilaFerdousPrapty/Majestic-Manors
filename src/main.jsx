@@ -12,7 +12,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <HelmetProvider>
       <AuthProvider>
         <RouterProvider router={router} />
-        <Toaster position="top-right" />
+        <Toaster position="top-right"
+        toastOptions={{
+          className: '',
+          style: {
+            border: '1px solid #713200',
+            padding: '0px',
+            color: '#713200',
+          },
+        }} />
       </AuthProvider>
     </HelmetProvider>
   </React.StrictMode>
