@@ -1,4 +1,5 @@
 import { Marker, MapContainer, Popup, TileLayer } from 'react-leaflet';
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import 'leaflet/dist/leaflet.css';
 import { icon } from "leaflet"
 import PropTypes from 'prop-types';
@@ -6,9 +7,8 @@ const LocationMap = ({coordinates,location}) => {
   //  console.log(coordinates);
   const position = coordinates;
   const ICON = icon({
+    iconUrl: markerIconPng,
     
-    iconUrl: "/src/assets/map_pointer_icon.png",
-    iconSize: [38, 38],
   })
         
   return(
