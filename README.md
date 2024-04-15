@@ -124,7 +124,7 @@ Majestic Manors/
 - [animate.css](https://www.npmjs.com/package/animate.css)
 - [react-leaflet](https://www.npmjs.com/package/react-leaflet)
 - [react-hook-form](https://www.npmjs.com/package/react-hook-form)
-- [swiper](https://swiperjs.com/get-started)
+- [swiper-slider](https://www.npmjs.com/package/swiper)
 - [react-helmet-async](https://www.npmjs.com/package/react-helmet-async)
 - [react-hot-toast](https://www.npmjs.com/package/react-hot-toast)
 
@@ -149,4 +149,4 @@ Contributions are welcome! Feel free to submit bug reports, feature requests, or
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
-### Feel free to reach out to us if you have any questions, feedback, or inquiries about Majestic Manors. Whether you're interested in exploring our exclusive estates, need assistance with authentication, or have suggestions for improving your browsing experience, our dedicated team is here to assist you. We value your input and are committed to providing exceptional service to our users. Don't hesitate to contact us via email, phone, or through the contact form on our website. Your satisfaction is our top priority, and we look forward to serving you with excellence. Feel free to contribute to our website as well 🏗️🏛️🏫🏨.
+#### Feel free to reach out to us if you have any questions, feedback, or inquiries about Majestic Manors. Whether you're interested in exploring our exclusive estates, need assistance with authentication, or have suggestions for improving your browsing experience, our dedicated team is here to assist you. We value your input and are committed to providing exceptional service to our users. Don't hesitate to contact us via email, phone, or through the contact form on our website. Your satisfaction is our top priority, and we look forward to serving you with excellence. Feel free to contribute to our website as well 🏗️🏛️🏫🏨.

@@ -26,7 +26,7 @@ const ViewProperties = () => {
     <>
       <div className="max-w-full p-4 shadow-md bg-gray-50 text-gray-800">
         <Helmet>
-          <title>{estate_title}</title>
+          <title>Property || {estate_title}</title>
         </Helmet>
         <div className="flex justify-between pb-4 border-bottom">
           <div className="flex items-center">

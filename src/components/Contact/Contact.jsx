@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 
 
 const Contact = () => {
@@ -30,7 +31,7 @@ const Contact = () => {
                             </p>
                         </div>
                     </div>
-                    <form noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
+                    <form className="flex flex-col py-6 space-y-6 md:py-0 md:px-6">
                         <label className="block">
                             <span className="mb-1">Full name</span>
                             <input type="text" placeholder="John Doe" className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-indigo-600 bg-gray-100" />
@@ -43,7 +44,7 @@ const Contact = () => {
                             <span className="mb-1">Message</span>
                             <textarea rows="3" className="block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-indigo-600 bg-gray-100"></textarea>
                         </label>
-                        <button type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-[#d19945]  text-white focus:ring-white hover:ring-gray-100">Submit</button>
+                        <button onClick={()=>{toast.success('Message sent')}} type="button" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 bg-[#d19945]  text-white focus:ring-white hover:ring-gray-100">Submit</button>
                     </form>
                 </div>
             </section>

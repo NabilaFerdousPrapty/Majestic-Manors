@@ -19,7 +19,7 @@ const Gallery = () => {
       <title>Majestic Manors || Gallery</title>
     </Helmet>
       <div className="mt-8 ">
-        <h2 className="text-5xl text-center text-[#d19945] my-4">
+        <h2 className="lg:text-5xl md:text-3xl text-2xl text-center text-[#d19945] my-4">
           Get to know what others say about us
         </h2>
         <div className="grid lg:grid-cols-2  grid-cols-1 gap-3">

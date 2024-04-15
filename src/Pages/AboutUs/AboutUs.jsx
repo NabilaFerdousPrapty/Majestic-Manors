@@ -6,7 +6,7 @@ import LocationMap from "../../components/LocationMap/LocationMap";
 const AboutUs = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const coordinates = [51.505, -0.09];
-  const location = "London, United Kingdom";
+  const location = "60 Queensway,London United Kingdom";
 
   return (
     <div>
@@ -58,7 +58,7 @@ const AboutUs = () => {
               Majestic Manors Team&nbsp;
             </span>
             &nbsp;on
-            <time datetime="2024-04-11">&nbsp;April 11th, 2024</time>
+            <time dateTime="2024-04-11">&nbsp;April 11th, 2024</time>
           </p>
         </div>
         <div className="text-gray-800 text-center">

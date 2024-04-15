@@ -42,14 +42,18 @@ const Login = () => {
   const handleSocialLogin = (socialProvider) => {
     socialProvider()
       .then((result) => {
-        toast.success("Login successful");
+        toast.success('You have   logged in', {
+          position: "top-center"
+        })
         if (result.user) {
           navigate(from);
         }
       })
       .catch((err) => {
         console.log(err);
-        toast.error(err.message);
+        toast.error(err.message),{
+          position: "top-center"
+        };
       });
   };
 

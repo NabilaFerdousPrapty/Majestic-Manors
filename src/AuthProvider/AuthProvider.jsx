@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "./../Firebase/FirebaseConfig";
-import { toast } from "react-hot-toast";
 
+import PropTypes from "prop-types";
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
@@ -82,3 +82,7 @@ const AuthProvider = ({ children }) => {
 };
 
 export default AuthProvider;
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

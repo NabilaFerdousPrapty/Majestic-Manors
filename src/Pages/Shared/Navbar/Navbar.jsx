@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import img from "../../../assets/user.png"
+import img from "../../../assets/user.png";
 import "../../../assets/style.css";
 import UseAuth from "../../../hooks/UseAuth";
 import { LuLogOut } from "react-icons/lu";
@@ -47,9 +47,24 @@ const Navbar = () => {
             <li>
               <NavLink to="/aboutUs">About us</NavLink>
             </li>
-          
+            {user?.email && (
+              <li className=" ">
+                <NavLink to="/updateProfile">
+                  <GrUpdate /> Update Profile
+                </NavLink>
+              </li>
+            )}
+            {
+              user?.email && (
+                <button 
+                onClick={() => logOut()}
+                className="px-3 flex justify-start items-center"
+              >
+               <LuLogOut /> Log Out
+              </button>
+              )
+            }
           </ul>
-          
         </div>
         <Link to="/">
           <h2 className="md:text-3xl font-body text-[#d19945] text-base">
@@ -72,40 +87,46 @@ const Navbar = () => {
           <li>
             <NavLink to="/aboutUs">About us</NavLink>
           </li>
+          {user?.email && (
+            <li className=" ">
+              <NavLink to="/updateProfile">
+                <GrUpdate />
+                Update Profile
+              </NavLink>
+            </li>
+          )}
         </ul>
       </div>
       <div className="navbar-end">
         {user?.email ? (
-          <div className="dropdown md:dropdown-hover">
-            <div tabIndex={0} role="button" className="btn m-1 ">
-              <img src={user?.photoURL|| img} alt="" className="w-8 rounded-2xl" />
+          <>
+            <div className="dropdown md:dropdown-hover lg:mx-3">
+              <div tabIndex={0} role="button" className="btn m-1 ">
+                <img
+                  src={user?.photoURL || img}
+                  alt=""
+                  className="w-8 rounded-2xl"
+                />
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box xl:w-36 md:w-[93px] lg:w-[90px] w-[86px]"
+              >
+                <li className="md:pt-3 py-1 text-center">
+                  {user?.displayName || "UserName"}
+                </li>
+              </ul>
             </div>
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box xl:w-36 md:w-[93px] lg:w-[90px] w-[86px]"
+            <button
+              onClick={() => logOut()}
+              className="hidden  bg-[#d19945] xl:px-4 lg:px-2 py-2 rounded-md lg:text-xs xl:text-base  lg:flex text-white justify-center items-center"
             >
-              <li className="md:pt-3 py-1 text-center">{user?.displayName ||'UserName'}</li>
-              <li className="md:pt-3 py-1 ">
-                <button
-                  onClick={() => logOut()}
-                  className=" bg-[#d19945] px-2 py-1 rounded-md text-xs  text-white justify-center"
-                >
-                 <LuLogOut /> Log Out
-                </button>
-              </li>
-              <li className=" py-1 ">
-                <Link to="/updateProfile"
-                  
-                  className=" bg-[#d19945] px-2 py-1 rounded-md text-xs text-white justify-center"
-                >
-                <GrUpdate />  Update Profile
-                </Link>
-              </li>
-            </ul>
-          </div>
+              <LuLogOut /> Log Out
+            </button>
+          </>
         ) : (
           <Link to="/login" className="btn bg-[#d19945] lg:px-8">
-           <CiLogin /> Login
+            <CiLogin /> Login
           </Link>
         )}
       </div>
