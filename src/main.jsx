@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           className: '',
           style: {
             border: '1px solid #713200',
-            padding: '0px',
+            padding: '2px',
             color: '#713200',
           },
         }} />
