@@ -32,18 +32,36 @@ const UpdateProfile = () => {
       <Helmet>
         <title>Majestic Manors || Update Profile</title>
       </Helmet>
-      <div className="flex flex-col max-w-lg p-6 bg-gray-50 text-gray-800 text-center">
+      <div className="flex flex-col max-w-lg p-6 bg-gray-50 text-gray-800 text-center justify-center items-center">
         <img
           src={user?.photoURL || img}
           alt=""
           className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square"
         />
         <div>
-          <h2 className="text-xl font-semibold">
-            {user?.displayName || "You have not added any UserName"}
-          </h2>
+          <form>
+            <div className="flex justify-center items-center gap-2">
+              <label htmlFor="username">Username:</label>
+              <input
+                type="text"
+                id="username"
+                className="w-full px-3 py-2 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-indigo-600"
+                value={user?.displayName || "You have not added any UserName"}
+                readOnly
+              />
+            </div>
+            <div className="flex justify-between items-center md:gap-2 gap-0">
+              <label htmlFor="email">Email:</label>
+              <input
+              className="w-full px-3 py-2 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-indigo-600 md:text-base text-sm"
+                type="email"
+                id="email"
+                value={user?.email || "You have not added any email"}
+                readOnly
+              />
+            </div>
+          </form>
 
-          <p>{user?.email || "You have not added any email"}</p>
           <div
             onClick={toggleFormVisibility}
             className="btn bg-[#d19945] px-2 py-1 rounded-md text-white"

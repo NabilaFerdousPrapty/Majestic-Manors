@@ -4,7 +4,6 @@ import 'leaflet/dist/leaflet.css';
 import { icon } from "leaflet"
 import PropTypes from 'prop-types';
 const LocationMap = ({coordinates,location}) => {
-  //  console.log(coordinates);
   const position = coordinates;
   const ICON = icon({
     iconUrl: markerIconPng,
@@ -14,7 +13,7 @@ const LocationMap = ({coordinates,location}) => {
     popupAnchor: [1, -34],
     tooltipAnchor: [16, -28],
     shadowSize: [41, 41]
-    
+
     
   })
         
