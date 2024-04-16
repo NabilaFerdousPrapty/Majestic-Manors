@@ -50,7 +50,7 @@ const UpdateProfile = () => {
                 readOnly
               />
             </div>
-            <div className="flex justify-between items-center  gap-0">
+            <div className="flex justify-between items-center md:gap-2 gap-0">
               <label htmlFor="email">Email:</label>
               <input
               className="w-full px-3 py-2 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-indigo-600 md:text-base text-sm"

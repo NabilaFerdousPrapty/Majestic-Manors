@@ -47,7 +47,7 @@ const Navbar = () => {
             <li>
               <NavLink to="/aboutUs">About us</NavLink>
             </li>
-            {user?.email && (
+            {user && (
               <li className=" ">
                 <NavLink to="/updateProfile">
                   <GrUpdate /> Update Profile
@@ -55,7 +55,7 @@ const Navbar = () => {
               </li>
             )}
             {
-              user?.email && (
+              user && (
                 <button 
                 onClick={() => logOut()}
                 className="px-3 flex justify-start items-center"
@@ -87,7 +87,7 @@ const Navbar = () => {
           <li>
             <NavLink to="/aboutUs">About us</NavLink>
           </li>
-          {user?.email && (
+          {user && (
             <li className=" ">
               <NavLink to="/updateProfile">
                 <GrUpdate />
@@ -98,7 +98,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {user?.email ? (
+        {user ? (
           <>
             <div className="dropdown md:dropdown-hover lg:mx-3">
               <div tabIndex={0} role="button" className="btn m-1 ">
